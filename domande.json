@@ -1,0 +1,1510 @@
+[
+  {
+    "number": "1",
+    "question": "Alcuni switch Ethernet implementano la funzione di proxy ARP, ovvero sono in grado di rispondere a una richiesta ARP (Address Resolution Protocol) al posto dell’host target. Come imparano le associazioni tra indirizzo MAC ed indirizzo IP?",
+    "answers": {
+      "A": "Osservando il traffico in transito e inviando dei comandi di “ping” per verificare lo stato delle interfacce degli host.",
+      "B": "Osservando il traffico in transito e memorizzando l’associazione presente nelle trame in una tabella di cache.",
+      "C": "Interrogando il server DHCP (Dynamic Host Configuration Protocol) periodicamente per tenere aggiornata la tabella di cache in base alle assegnazioni del DHCP.",
+      "D": "Interrogando periodicamente tutte le interfacce degli host a lui collegati per tenere aggiornata la tabella di cache indipendentemente dal server DHCP."
+    },
+    "correctAnswer": "B"
+  },
+{
+  "number": "2",
+  "question": "Alla ricezione di un segmento corretto e in sequenza, un ricevitore TCP:",
+  "answers": {
+    "A": "Invia un ACK cumulativo che contiene la lista di tutti i segmenti ricevuti fino a quel momento.",
+    "B": "Invia un ACK selettivo del segmento stesso indicando il segmento successivo che si aspetta di ricevere, ovvero il segmento successivo al segmento ricevuto.",
+    "C": "Invia un ACK cumulativo di tutto quanto ricevuto fino a quell’istante indicando l’ultimo byte del segmento ricevuto.",
+    "D": "Invia un ACK cumulativo di tutto quanto ricevuto fino a quell’istante indicando il byte successivo che si aspetta di ricevere, ovvero il byte successivo all’ultimo byte del segmento ricevuto."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "3",
+  "question": "Claude Shannon, padre della teoria dell’informazione ha proposto un modello di canale di trasmissione noto come AWGN (Additive White Gaussian Noise). Chiamati B la banda del canale in Hz, S l’energia associata ai bit trasmessi e N l’energia del rumore additivo, qual è la capacità massima C in bit/s, in base alla teoria di Shannon, di questo canale trasmissivo?",
+  "answers": {
+    "A": "C=Blog2(N/S+1).",
+    "B": "C=Blog2(S/N+1).",
+    "C": "C=B[log2(S/N)]+1.",
+    "D": "C=Slog2(B/N+1)."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "4",
+  "question": "Cosa caratterizza un protocollo di trasporto affidabile di tipo Stop and Wait?",
+  "answers": {
+    "A": "Una finestra di trasmissione e ricezione pari a 1 PDU.",
+    "B": "Una finestra di congestione pari a 1 PDU.",
+    "C": "Tempo di trasmissione di 1 PDU pari a 1 RTT.",
+    "D": "Una finestra di ricezione pari a 1 PDU, quella di trasmissione può essere maggiore."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "5",
+  "question": "Cosa rappresenta la finestra di ricezione in un protocollo a finestra del livello trasporto?",
+  "answers": {
+    "A": "La quantità di dati che il ricevitore può accettare dal livello applicativo per rispondere alle richieste del trasmettitore.",
+    "B": "La quantità di dati che il ricevitore può memorizzare senza consegnare dati al livello applicativo.",
+    "C": "La quantità di dati che il ricevitore memorizza prima di iniziare a trasferirli al livello applicativo.",
+    "D": "La quantità di memoria che il protocollo dedica all’informazione che potrebbe essere ritrasmessa, in modo da poter mandare un messaggio di “dati duplicati” se il trasmettitore li ritrasmette."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "6",
+  "question": "Data una rete di N nodi, qual è il numero minimo di canali bidirezionali per costruire una topologia che connette tutti i nodi e qual è questa topologia?",
+  "answers": {
+    "A": "N−1, topologia: albero.",
+    "B": "1, topologia: bus passivo.",
+    "C": "N, topologia: stella.",
+    "D": "N, topologia: anello."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "7",
+  "question": "Date le seguenti variabili: RTT = valore del campione di Round Trip Time appena misurato, SRTT = stima del valore medio del Round Trip Time, RTTVAR = stima della varianza del Round Trip Time; il protocollo TCP calcola SRTT e RTTVAR nel seguente modo:",
+  "answers": {
+    "A": "SRTT = 0.9*SRTT + 0.1*RTT e RTTVAR = 0.7*RTTVAR + 0.3*|SRTT − RTT|",
+    "B": "RTT = SRTT + (1/8)*RTT e RTTVAR = (3/4)*RTTVAR + (1/4)*|RTTVAR − RTT|",
+    "C": "SRTT = (7/8)*SRTT + (1/8)*RTT e RTTVAR = (3/4)*RTTVAR + (1/4)*(SRTT − RTT)",
+    "D": "SRTT = (7/8)*SRTT + (1/8)*RTT e RTTVAR = (3/4)*RTTVAR + (1/4)*|SRTT − RTT|"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "8",
+  "question": "DHCP (Dynamic Host Configuration Protocol) è un protocollo:",
+  "answers": {
+    "A": "Connectionless (su UDP) con 4-way handshake: Discover, Offer, Request, Confirm.",
+    "B": "Connectionless (su UDP) con 3-way handshake: Discover, Request, Offer.",
+    "C": "Connection-oriented (su TCP) con 4-way handshake: Discover, Offer, Request, Confirm.",
+    "D": "Connection-oriented (su TCP) con 3-way handshake: Discover, Request, Offer."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "9",
+  "question": "DHCP (Dynamic Host Configuration Protocol) serve a configurare in modo automatico un host quando questo si collega ad una rete locale. Quale dei seguenti parametri NON viene configurato dal DHCP?",
+  "answers": {
+    "A": "Indirizzo IP del server DNS locale.",
+    "B": "Subnet Mask dell’host richiedente.",
+    "C": "Indirizzo MAC dell’host richiedente.",
+    "D": "Indirizzo IP dell’host richiedente."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "10",
+  "question": "Due stazioni di un BSS 802.11 rilevano il canale occupato e attendono quindi la fine del dialogo sul canale per iniziare una procedura di accesso. Nell’ipotesi che siano le uniche due stazioni coinvolte nella procedura e che CWmin=32 per entrambe, qual è la probabilità di collisione?",
+  "answers": {
+    "A": "2/32",
+    "B": "1/2",
+    "C": "1/32",
+    "D": "(1/32)⋅(1-1/32)"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "11",
+  "question": "Gli indirizzi IP sono numeri interi di 32 bit, normalmente indicati nella notazione “dotted decimal”, cioè con quattro numeri interi separati da un punto: X.Y.Z.W, con associata una “network mask” con la stessa notazione; ad esempio 128.10.0.18; 255.255.255.0. Indicare quale dei seguenti indirizzi è un indirizzo unicast valido instradabile in Internet: ",
+  "answers": {
+    "A": "20.144.11.132; 255.255.255.128",
+    "B": "10.144.11.132; 255.255.255.128",
+    "C": "130.192.1.0; 255.255.255.0",
+    "D": "224.144.11.132; 255.255.255.0"
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "12",
+  "question": "I codici a ridondanza ciclica (CRC) impiegati ad esempio come Checksum per Ethernet:",
+  "answers": {
+    "A": "Sono un caso particolare dei bit di parità, si ottengono ponendo i dati in una matrice e calcolando la parità sia per riga che per colonna.",
+    "B": "Sono codici che consentono la rilevazione di un buon numero di errori, purché non si presentino in burst, ad esempio, di più di 4 bit errati consecutivi per CRC a 32 bit.",
+    "C": "Sono i bit ottenuti come resto di un’operazione di divisione in binario, ogni codice CRC è caratterizzato dalla divisione per uno specifico polinomio generatore.",
+    "D": "Sono quei bit tali per cui la loro moltiplicazione in binario per il polinomio generatore ritorna i dati originali; ogni codice CRC è caratterizzato dalla moltiplicazione per uno specifico polinomio generatore."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "13",
+  "question": "I “Cookies” sono un modo per mantenere uno “stato” relativo ad un utente nei servizi Web. In cosa consistono?",
+  "answers": {
+    "A": "Codici identificativi generati dal servizio Web a ogni accesso e inviati ai browser che li memorizzano localmente. Il servizio Web associa questi codici a una base dati temporanea che contiene informazioni relative alla sessione di navigazione e viene cancellata alla fine della sessione stessa.",
+    "B": "Piccoli file identificativi generati dal servizio Web e inviati ai browser, che li memorizzano localmente e li usano nelle sessioni successive per migliorare l’esperienza di navigazione sul sito da parte dell’utente. Questi file contengono informazioni relative alla struttura del servizio Web e alle preferenze dell’utente, consentendo al browser di effettuare alcune operazioni in autonomia. Una volta generati dal servizio Web questi file non vengono più trasmessi al browser e, se cancellati, devono essere rigenerati.",
+    "C": "Piccoli file identificativi generati dal servizio Web e inviati ai browser, che li memorizzano localmente e li inviano al servizio Web ad ogni eventuale richiesta futura. Questi file sono associati a una base dati mantenuta dal gestore dei servizi Web e memorizzano informazioni relative all’utente (preferenze, azioni incomplete, ...).",
+    "D": "Piccoli file identificativi generati dal servizio Web e inviati ai browser, che li memorizzano localmente e li inviano al servizio Web ad ogni eventuale richiesta futura. Questi file sono associati a una base dati mantenuta dall’operatore della rete e memorizzano informazioni relative all’utente (preferenze, azioni incomplete, ...) e al servizio Web associato, per velocizzare navigazioni future."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "14",
+  "question": "I più diffusi protocolli di livello applicativo di Internet come HTTP, SMTP e simili hanno le seguenti caratteristiche:",
+  "answers": {
+    "A": "Sono basati su campi numerici binari (come gli indirizzi IP) di dimensione fissa identificati da un “tag” e separati gli uni dagli altri dalla coppia di caratteri CR LF.",
+    "B": "Sono basati su campi testuali di dimensione variabile identificati da un “tag” e separati gli uni dagli altri dalla coppia di caratteri CR LF.",
+    "C": "Sono basati su campi testuali di dimensione fissa identificati da un “tag” e separati gli uni dagli altri dalla coppia di caratteri CR LF.",
+    "D": "Sono basati su campi numerici di dimensione fissa il cui significato dipende dalla loro posizione rispetto all’inizio dell’header del messaggio."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "15",
+  "question": "I protocolli di accesso Carrier Sense Multiple Access with Collision Detection (CSMA/CD) hanno un comportamento quasi ideale (efficienza unitaria) nelle seguenti condizioni:",
+  "answers": {
+    "A": "Reti di dimensioni (spaziali) limitate, con velocità di trasmissione relativamente lenta e dimensione delle trame grandi.",
+    "B": "Reti di dimensioni (spaziali) medio grandi, con velocità di trasmissione relativamente lenta e dimensione delle trame molto piccole, non più di 64 byte.",
+    "C": "Reti con un rapporto Ttx/Tp circa uguale a 1, dove Ttx indica il tempo medio di trasmissione di una trama e Tp il tempo di propagazione del segnale elettromagnetico da un estremo all’altro della rete.",
+    "D": "Reti con un rapporto Ttx/Tp maggiore di 1, dove Ttx indica il tempo medio di trasmissione di una trama e Tp il tempo di propagazione del segnale elettromagnetico da un estremo all’altro della rete, purché tuttavia Ttx non sia troppo grande perché indicherebbe una rete troppo lenta."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "16",
+  "question": "I servizi e le applicazioni su Internet hanno diversi requisiti di comunicazione. Quale di queste affermazioni è vera?",
+  "answers": {
+    "A": "Per funzionare bene in Internet le applicazioni devono adattare il proprio rate di trasmissione alle condizioni della rete, eventualmente riducendo la finestra di trasmissione per mantenere basso il ritardo end-to-end.",
+    "B": "Le applicazioni hanno requisiti molto variabili in termini di correttezza dei dati, ritardo end-to-end, temporizzazione e molto altro, e scelgono uno o più protocolli di livello trasporto (TCP, UDP e altri ancora) in modo da soddisfare le proprie esigenze.",
+    "C": "Per funzionare bene in Internet le applicazioni devono adattare i propri requisiti o al protocollo TCP, se hanno bisogno di affidabilità, oppure al protocollo UDP se non possono aprire una connessione.",
+    "D": "Le applicazioni hanno requisiti molto variabili in termini ritardo end-to-end, temporizzazione e molto altro, ma richiedono tutte la correttezza dei dati, per cui se non possono usare TCP a livello trasporto devono implementare il recupero dei dati persi sopra UDP."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "17",
+  "question": "Il comando “ping” (o equivalenti applicativi sia testuali che grafici):",
+  "answers": {
+    "A": "È un comando basato sull’uso di messaggi ICMP (Internet Control Message Protocol), che consentono di stabilire se i diversi servizi esposti attraverso una interfaccia IP sono raggiungibili dai client.",
+    "B": "È un comando basato sull’uso di messaggi ICMP (Internet Control Message Protocol), che consentono di stabilire se una interfaccia IP è raggiungibile e verificare il percorso usato per raggiungerla.",
+    "C": "È un comando basato sull’uso di due messaggi ICMP (Internet Control Message Protocol), echo_request e echo_reply, che consentono di stabilire se un server è raggiungibile e calcolare il Round Trip Time (RTT) che verrà sperimentato dalle connessioni verso questo server.",
+    "D": "È un comando basato sull’uso di due messaggi ICMP (Internet Control Message Protocol), echo_request e echo_reply, che consentono di stabilire se una interfaccia IP è raggiungibile e calcolare il Round Trip Time a livello IP."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "18",
+  "question": "Il DNS (Domain Name System):",
+  "answers": {
+    "A": "È una base dati distribuita che supporta la risoluzione dei nomi di dominio in indirizzi IP e altre funzioni correlate. I server in grado di tradurre sempre un FQDN (Fully Qualified Domain Name) sono chiamati server di competenza o autoritativi.",
+    "B": "È una funzione implementata dai router, in particolare dai default gateway, che consente al router di tradurre il nome di dominio nel corrispondente indirizzo IP e quindi di instradare correttamente l’informazione.",
+    "C": "È una base dati distribuita organizzata in modo gerarchico su tre livelli: Top Level Domain, Server Autoritativi o di Competenza, Server DNS locale. Supporta la risoluzione dei nomi di dominio in indirizzi IP e altre funzioni correlate.",
+    "D": "È una base dati distribuita, organizzata a partire da 13 server (server radice) che gestiscono i diversi TLD (Top Level Domain), che supporta la risoluzione dei nomi di dominio in indirizzi IP e altre funzioni correlate. I server TLD inoltrano le richieste ai server DNS locali che possiedono le informazioni sui nomi completi chiamati FQDN (Fully Qualified Domain Name)."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "19",
+  "question": "Il modello di servizio di telecomunicazione client / server, tipico di Internet, prevede:",
+  "answers": {
+    "A": "Che il server (fornitore del servizio) sia un processo sempre attivo e sempre in ascolto di possibili richieste provenienti dai client su una specifica porta dell’opportuno livello di trasporto.",
+    "B": "Che il server (fornitore del servizio) sia collocato in un opportuno data-center sempre attivo e a disposizione, con una elevata garanzia di servizio.",
+    "C": "Che il server (fornitore del servizio) sia un sistema disponibile sul web e in grado di collegarsi ai client quando questi ne fanno richiesta, ovunque essi siano.",
+    "D": "Che il server (fornitore del servizio) sia un processo sempre attivo e sempre in ascolto su un indirizzo IP predefinito e conosciuto dai client."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "20",
+  "question": "Il numero di livelli in una architettura protocollare:",
+  "answers": {
+    "A": "Dipende dalle scelte architetturali di chi ha progettato l’architettura.",
+    "B": "È fisso e pari a 5 come definito da Internet.",
+    "C": "Varia tra 3 e 7 a seconda che si usi o meno una rete a commutazione di pacchetto.",
+    "D": "È fisso e pari a 7 come definito dal modello ISO/OSI."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "21",
+  "question": "Il protocollo ARP (Address Resolution Protocol) serve a tradurre gli indirizzi IP in indirizzi MAC (o “Ethernet”). Quale delle seguenti affermazioni è corretta?",
+  "answers": {
+    "A": "È un protocollo broadcast and select, in cui l’host che vuole risolvere un indirizzo IP manda la richiesta in broadcast e l’host che riconosce il proprio indirizzo IP risponde nuovamente in broadcast.",
+    "B": "È un protocollo broadcast and select, in cui l’host che vuole risolvere un indirizzo IP manda la richiesta in broadcast e l’host che riconosce il proprio indirizzo IP risponde in unicast indicando il proprio indirizzo MAC.",
+    "C": "È un protocollo per reti locali, in cui l’host che vuole risolvere un indirizzo IP manda la richiesta al router di default che risponde con la mappatura corretta.",
+    "D": "È un protocollo di Internet che serve a tradurre un indirizzo IP, che è logico, in un indirizzo MAC per poter consegnare il datagramma al destinatario finale del datagramma."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "22",
+  "question": "Il protocollo FTP (File Transfer Protocol):",
+  "answers": {
+    "A": "È un protocollo di livello applicativo dedicato al trasferimento dei file, a livello trasporto usa UDP per trasmettere i comandi dal client al server e TCP per trasferire i file, in modo da velocizzare i comandi, ma trasferire i file in modo affidabile.",
+    "B": "È uno dei primi protocolli di livello applicativo definiti nella pila protocollare TCP/IP, usa TCP come protocollo di livello trasporto e consente di inviare file dal server al client e viceversa.",
+    "C": "È un protocollo di livello trasporto alternativo a TCP definito recentemente per ottimizzare il trasporto di grossi file con HTTP/2.",
+    "D": "È uno dei primi protocolli di livello applicativo definiti nella pila protocollare TCP/IP, usa TCP come protocollo di livello trasporto, ma consente di trasferire file solamente dal server al client (download), per cui se un host A desidera trasferire un file verso un host B deve necessariamente installare un server FTP."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "23",
+  "question": "Il protocollo HTTP, nelle sue versioni 1.0 e 1.1, può usare al livello trasporto connessioni TCP persistenti. Questo significa che:",
+  "answers": {
+    "A": "Viene aperta una connessione TCP fra il client e il server per ogni oggetto che il client deve scaricare.",
+    "B": "Sulla stessa connessione TCP tra il client e il server vengono trasmessi in sequenza uno o più oggetti che vanno a comporre la pagina Web; il client richiede la trasmissione di ciascun oggetto nella sequenza che ritiene più opportuna, anche in pipelining.",
+    "C": "Viene aperta una connessione TCP fra il client e il server per scaricare il primo oggetto della pagina Web. Il protocollo HTTP poi valuta se utilizzare la stessa connessione TCP per scaricare eventuali altri oggetti o se utilizzare una connessione TCP per oggetto da scaricare ai fini di ottimizzare l’utilizzo della banda disponibile in base all’RTT misurato per il primo oggetto.",
+    "D": "Viene aperta una prima connessione TCP, scaricando il primo oggetto della pagina Web. Se questo trasferimento ha successo, viene tenuta aperta questa connessione TCP inviando la richiesta di un nuovo oggetto, ma viene aperta una seconda connessione TCP per trasferire un altro oggetto in parallelo, se entrambi questi trasferimenti hanno successo viene aperta una terza connessione, e così via, fino a quando la pagina web è composta per intero."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "24",
+  "question": "Il protocollo SMTP (Simple Mail Transfer Protocol):",
+  "answers": {
+    "A": "È il protocollo usato per inviare messaggi di posta elettronica.",
+    "B": "È il protocollo usato dai server di posta elettronica, mentre i client usano POP3 oppure IMAP.",
+    "C": "È un protocollo obsoleto di invio della posta elettronica, sostituito da MMTP (Mime Mail Transfer Protocol) che consente l’invio di messaggi con formato arbitrario.",
+    "D": "È un protocollo per l’invio via posta elettronica di semplici messaggi testuali tipo chat, mentre per inviare messaggi complessi bisogna usare IMAP."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "25",
+  "question": "Il protocollo TCP effettua controllo di congestione modificando le dimensioni della finestra di trasmissione. Supponendo che una connessione TCP sia “a regime,” quindi non nelle fasi iniziali della trasmissione, e che la perdita di segmenti sia un evento sporadico tale da non innescare dei timeout (scadenza RTO), quale andamento della dimensione della finestra di trasmissione in funzione del tempo è quello corretto?",
+  "answers": {
+    "A": "A “dente di sega” con una crescita esponenziale nel tempo durante le fasi di funzionamento senza perdite per trasmettere più velocemente, e con il dimezzamento della finestra quando vengono ricevuti 3 ACK duplicati (perdita di un segmento).",
+    "B": "A “dente di sega” con una crescita lineare nel tempo durante le fasi di funzionamento senza perdite, e con il dimezzamento della finestra quando vengono ricevuti 3 ACK duplicati (perdita di un segmento).",
+    "C": "A “impulsi” con una crescita esponenziale nel tempo durante le fasi di funzionamento senza perdite, e quando vengono ricevuti 3 ACK duplicati (perdita di un segmento) si ritrasmette il segmento perso e si ricomincia a trasmettere con finestra pari a 1 MSS (Maximum Segment Size).",
+    "D": "A “impulsi” con una crescita esponenziale nel tempo durante le fasi di funzionamento senza perdite, e quando vengono ricevuti 3 ACK duplicati (perdita di un segmento) si ritrasmette il segmento perso, il trasmettitore si ferma per un RTT per lasciare che la rete si decongestioni e poi ricomincia a trasmettere con finestra pari alla finestra che aveva nel momento in cui ha ricevuto i 3 ACK duplicati, mantenendo in questo modo il throughput elevato."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "26",
+  "question": "Il protocollo TCP effettua controllo di congestione e di flusso agendo sulle dimensioni della finestra di trasmissione. In che modo?",
+  "answers": {
+    "A": "Evolve la propria finestra di congestione CWND secondo la ricezione degli ACK, e ricava la finestra di ricezione RWND annunciata negli ACK. Pone la finestra di trasmissione pari a min(CWND, RWND).",
+    "B": "Evolve la propria finestra di ricezione RWND secondo la ricezione degli ACK, e ricava la finestra di congestione CWND annunciata negli ACK. Pone la finestra di trasmissione pari a max(CWND, RWND).",
+    "C": "Evolve la propria finestra di ricezione RWND secondo la ricezione degli ACK, e ricava la finestra di congestione CWND annunciata negli ACK. Pone la finestra di trasmissione pari a min(CWND, RWND).",
+    "D": "Evolve la propria finestra di congestione CWND secondo la ricezione degli ACK, e ricava la finestra di ricezione RWND annunciata negli ACK. Pone la finestra di trasmissione pari a max(CWND, RWND)."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "27",
+  "question": "Il protocollo TCP effettua controllo di flusso:",
+  "answers": {
+    "A": "Evitando che la velocità di trasmissione superi la capacità disponibile in rete.",
+    "B": "In modo cooperativo tra trasmettitore e ricevitore, garantendo che la finestra di trasmissione non superi mai la finestra di ricezione annunciata dal ricevitore negli ACK.",
+    "C": "Al ricevitore, mandando ACK che inibiscono la trasmissione di nuovi segmenti.",
+    "D": "Attraverso opportuni meccanismi di segnalazione tra il livello rete (IP) e il livello trasporto (TCP stesso)."
+  },
+  "correctAnswer": "B"
+},
+
+{
+  "number": "28",
+  "question": "In generale l’architettura di un router prevede la presenza di:",
+  "answers": {
+    "A": "Schede di Ingresso e Uscita (Input/Output Port) che realizzano il forwarding; un “routing engine” che calcola la rotta per la destinazione quando si riceve un datagramma con un indirizzo IP mai visto prima.",
+    "B": "Schede di Ingresso e Uscita (Input/Output Port) che realizzano il forwarding; un “routing engine” che inoltra i pacchetti che non sa instradare verso il default gateway.",
+    "C": "Schede di Ingresso e Uscita (Input/Output Port) che si occupano di decapsulare e incapsulare i datagrammi IP nelle trame di livello 2; un “forwarding engine” che in base agli indirizzi IP di sorgente e destinazione decide la porta di uscita del datagramma e il suo eventuale Next-Hop.",
+    "D": "Schede di Ingresso e Uscita (Input/Output Port) che si occupano di decapsulare e incapsulare i datagrammi IP nelle trame di livello 2; una “switching fabric” che in base all’indirizzo IP di destinazione decide la porta di uscita del datagramma e il suo eventuale Next- Hop."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "29",
+  "question": "In un protocollo a finestra le PDU devono essere numerate per poterle riconoscere e ritrasmettere in caso di perdita o errori. Dette N, WT e WR le dimensioni dello spazio di numerazione e delle finestre di trasmissione e ricezione rispettivamente, quale delle seguenti condizioni è necessaria per il corretto funzionamento del protocollo?",
+  "answers": {
+    "A": "N>WT",
+    "B": "N>(WT+WR)",
+    "C": "N>WR",
+    "D": "N<(WT+WR)"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "30",
+  "question": "In un protocollo di trasporto affidabile con una finestra di trasmissione di N PDU, detta L la lunghezza in bit della PDU, C la capacità della rete in bit/s e RTT il Round Trip Time in secondi, l’efficienza del protocollo è:",
+  "answers": {
+    "A": "C×N⋅LRTTseN⋅LC<RTT, altrimenti 1.",
+    "B": "(N⋅L/C))NRTTseLC<RTT, altrimenti 1.",
+    "C": "(N⋅L/C)[RTT+(L/C)]seN⋅LC<RTT, altrimenti 1.",
+    "D": "N⋅LCseNLC<RTT, altrimenti LC."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "31",
+  "question": "In un Record di tipo A del DNS (Domain Name System):",
+  "answers": {
+    "A": "Il campo name è il nome dell’host e il campo value è il suo indirizzo IP.",
+    "B": "Il campo name è il nome alias dell’host e il campo value è il nome autentico o canonico.",
+    "C": "Il campo name è il nome dell’host e il campo value è il tempo per cui il suo indirizzo IP non cambierà di sicuro.",
+    "D": "Il campo name è il nome del server DNS di competenza e il campo value è il nome dell’host target."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "32",
+  "question": "In una rete Ethernet, quale porzione di rete rappresenta il Dominio di Broadcast?",
+  "answers": {
+    "A": "Quella a cui sono fisicamente collegati (tramite cavo o altro link fisico, oppure hub di livello 1) dei dispositivi di comunicazione in modo da avere una comunicazione diretta da tutti a tutti con l’invio di una singola trama.",
+    "B": "Quella in cui può essere inviata una trama senza usare l’ausilio di uno switch.",
+    "C": "Quella in cui può essere inviata una trama di livello 2 in broadcast con la garanzia che venga ricevuta da tutte le stazioni, salvo errori di trasmissione o perdita della trama in un dispositivo attivo (switch, hub, bridge, ecc).",
+    "D": "Quella in cui possono venire risolte eventuali collisioni."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "33",
+  "question": "L’architettura di servizio dominante in Internet è l’architettura Client/Server. In questa architettura:",
+  "answers": {
+    "A": "Il processo Client richiede al DNS di iniziare la comunicazione; il processo Server deve essere registrato nel sistema DNS.",
+    "B": "Il processo Client può iniziare la comunicazione solamente se il processo Server ha garantito l’accesso alla risorsa (URL) richiesta.",
+    "C": "Il processo Client inizia la comunicazione; il processo Server deve risiedere in un Data Center.",
+    "D": "Il processo Client inizia la comunicazione; il processo Server deve sempre essere in ascolto e risponde alla richiesta."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "34",
+  "question": "L’informazione memorizzata nella cache ARP (o tabella ARP -- Address Resolution Protocol) viene mantenuta approssimativamente:",
+  "answers": {
+    "A": "30 minuti.",
+    "B": "30 millisecondi.",
+    "C": "10 minuti.",
+    "D": "30 secondi."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "35",
+  "question": "La chiusura delle connessioni TCP con il flag di FIN (gentle closure):",
+  "answers": {
+    "A": "Avviene in modo coordinato sulle due half connections solo quando tutta l’informazione è stata trasferita in entrambe le direzioni.",
+    "B": "Avviene su iniziativa del server quando ha finito il trasferimento dell’informazione di interesse.",
+    "C": "Avviene su iniziativa del client quando ha finito il trasferimento dell’informazione di interesse.",
+    "D": "Avviene in modo indipendente sulle due half connections e non impedisce l’invio degli eventuali ACK residui, ad esempio in caso di perdita di pacchetti."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "36",
+  "question": "La consegna diretta di un datagramma IP avviene quando:",
+  "answers": {
+    "A": "Sorgente e destinazione sono collegati allo stesso switch.",
+    "B": "Sorgente e destinazione si trovano nella stessa Subnet.",
+    "C": "Sorgente e destinazione conoscono i rispettivi indirizzi IP.",
+    "D": "Sorgente e destinazione si trovano nella stessa LAN."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "37",
+  "question": "La funzione di framing a livello 2 serve a delimitare le trame preparandole per la trasmissione a livello fisico. Come funziona la tecnica “character stuffing”?",
+  "answers": {
+    "A": "Inserisce all’inizio e alla fine di una trama un carattere speciale, ad esempio DLE (Data Link Escape), e se per caso nel payload della trama si trova lo stesso carattere allora viene duplicato dal trasmettitore, ed il ricevitore se identifica una coppia DLE-DLE cancella la seconda prima di consegnare i dati al livello superiore.",
+    "B": "La trama inizia con una sequenza di sincronizzazione seguita da un carattere speciale noto come FrameInit, la trama finisce con un silenzio quando non ci sono più dati da trasmettere.",
+    "C": "Inserisce all’inizio e alla fine di una trama un carattere speciale, ad esempio DLE (Data Link Escape), e se per caso nel payload della trama si trova lo stesso carattere la trama viene conclusa e se ne inizia un’altra per non avere ambiguità.",
+    "D": "Inserisce all’inizio e alla fine di una trama due caratteri speciali che ha preventivamente concordato in una fase di handshake con il ricevitore."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "38",
+  "question": "La struttura dell’intestazione (header) delle richieste HTTP è (<SP> rappresenta uno spazio):",
+  "answers": {
+    "A": "È formata da campi testuali della forma: <tag>:<SP><valore>CRLF tranne che per la prima riga che ha la forma fissa: <metodo><SP><URL><SP><versione>CRLF",
+    "B": "Non ha una struttura fissa, dipende dal costrutto HTML che si vuole trasferire.",
+    "C": "È formata da campi binari di dimensione fissa per velocizzare l’elaborazione.",
+    "D": "È formata da campi testuali descrittivi con un formato compatibile con XML, così è facile da parsificare."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "39",
+  "question": "Le tre funzioni fondamentali di una rete di telecomunicazione sono:",
+  "answers": {
+    "A": "Instradamento, Comunicazione, Inoltro.",
+    "B": "Trasmissione, Codifica, Commutazione.",
+    "C": "Segnalazione, Apertura di un canale, Trasferimento dell’informazione.",
+    "D": "Trasmissione, Commutazione, Segnalazione."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "40",
+  "question": "Nel caso in cui una sessione HTTP trasferisca un singolo oggetto, chiamati RTT il Round Trip Time tra client e server e Tx il tempo necessario a trasmettere l’oggetto, il tempo minimo di trasferimento è:",
+  "answers": {
+    "A": "(3RTT + Tx). Un RTT serve per aprire la connessione TCP, un RTT serve a inviare la richiesta dell’oggetto (che supponiamo molto piccola e quindi con un tempo di trasmissione trascurabile) e a ricevere la risposta positiva (200 OK) dal server seguito immediatamente dalla trasmissione dell’oggetto, che dura Tx, il terzo RTT serve per l’acknowledgment di ricezione dell’oggetto.",
+    "B": "(2RTT + Tx). Un RTT serve per aprire la connessione TCP, un RTT serve a inviare la richiesta dell’oggetto (che supponiamo molto piccola e quindi con un tempo di trasmissione trascurabile) e a ricevere la risposta positiva (200 OK) dal server seguita immediatamente dalla trasmissione dell’oggetto, che dura Tx.",
+    "C": "(RTT + N(RTT+Tx/N)). Un RTT serve per aprire la connessione TCP, gli altri N RTT servono a trasmettere gli N segmenti in cui TCP divide l’oggetto per rispettare la MTU a livello IP e ricevere il relativo ACK, mentre ovviamente ciascun segmento impiega Tx/N per la trasmissione.",
+    "D": "(RTT + Tx). Un RTT serve per aprire la connessione TCP e inviare la richiesta dell’oggetto (che supponiamo molto piccola e quindi con un tempo di trasmissione trascurabile), segue la risposta positiva (200 OK) del server seguita immediatamente dalla trasmissione dell’oggetto, che dura Tx."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "41",
+  "question": "Nel DNS (Domain Name System):",
+  "answers": {
+    "A": "Ogni dominio deve avere almeno un authoritative server, che deve avere l’indirizzo dell’authoritative server di tutti i domini a cui esso è subordinato.",
+    "B": "Ogni dominio deve avere almeno un authoritative server, che deve avere l’indirizzo degli authoritative server dei domini subordinati, se presenti.",
+    "C": "Non è necessario che ogni dominio debba avere un authoritative server, purchè il server DNS locale abbia l’indirizzo dei server authoritative dei domini subordinati, se presenti.",
+    "D": "Non è necessario che ogni dominio debba avere un authoritative server, purchè il server DNS locale abbia l’indirizzo del server authoritative del TLD a cui il dominio è subordinato."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "42",
+  "question": "Nel protocollo 802.11 si definisce BSS (Basic Service Set):",
+  "answers": {
+    "A": "Un insieme di stazioni che usano lo stesso canale e le stesse risorse fisiche e logiche per comunicare tra loro, ma solo se non c’è un Access Point (AP) per l’accesso a Internet, altrimenti si chiama ESS (Extended Service Set).",
+    "B": "L’insieme di tutte le stazioni collegate a un Access Point (AP).",
+    "C": "Un insieme di stazioni che usano lo stesso canale e le stesse risorse fisiche e logiche per comunicare tra loro; un BSS si dice infrastrutturato se esiste una stazione speciale detta Access Point (AP) che interconnette il BSS verso altre reti di tipo LAN oppure direttamente a un router per l’accesso a Internet.",
+    "D": "L’area fisica coperta dal segnale di un Access Point (AP)."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "42",
+  "question": "Nel sistema di posta elettronica di Internet, quando si usa un “web-service,” e non un client di posta locale, quali protocolli vengono usati?",
+  "answers": {
+    "A": "SMTP tra server sia per inviare che per ricevere messaggi, e anche dal browser per accedere alla casella di posta.",
+    "B": "Gli utenti configurano il proprio server di posta dal sito web per decidere il protocollo tra SMTP, IMAP e POP da usare tra server sia per inviare che per ricevere messaggi.",
+    "C": "SMTP tra server sia per inviare che per ricevere messaggi; gli utenti visualizzano e gestiscono la posta direttamente sul server con un browser usando quindi HTTP.",
+    "D": "SMTP tra server sia per inviare che per ricevere messaggi; POP oppure IMAP dal browser per creare la copia locale della casella di posta sul dispositivo dell’utente."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "43",
+  "question": "Nel sistema di posta elettronica di Internet, quando si usa un client di posta locale e non un “web-service,” vengono usati due diversi protocolli: SMTP, e POP oppure IMAP. Qual è la configurazione corretta del sistema?",
+  "answers": {
+    "A": "SMTP per inviare messaggi; POP oppure IMAP per riceverli.",
+    "B": "SMTP tra server sia per inviare che per ricevere messaggi, e dagli User Agent per inviare i messaggi; POP oppure IMAP dagli User Agent per ricevere i messaggi.",
+    "C": "SMTP tra server sia per inviare che per ricevere messaggi; POP oppure IMAP dagli User Agent per ricevere e inviare i messaggi.",
+    "D": "SMTP tra server sia per inviare che per ricevere messaggi, e dagli User Agent per inviare i messaggi se usano POP per riceverli; se uno User Agent usa IMAP lo usa sia per ricevere che per inviare i messaggi."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "44",
+  "question": "Nell’ambito dell’utilizzo di un NAT (Network Address Translator):",
+  "answers": {
+    "A": "Le funzioni di NAT sono spesso accoppiate alle funzioni di inoltro tipiche di un router ed a ulteriori funzioni di gestione del traffico a livello applicativo (ad esempio, firewall).",
+    "B": "Il NAT è più efficiente di un router per l’inoltro, grazie al fatto che salva informazioni di stato relative alle connessioni che lo attraversano.",
+    "C": "In generale il NAT non crea problemi alle applicazioni P2P (peer-to-peer) perché per tali applicazioni il NAT è trasparente di default.",
+    "D": "Con NAT si possono instaurare connessioni da un indirizzo della rete privata verso la rete pubblica, ma senza ulteriori meccanismi (ad es. STUN o TURN) un client con indirizzo IP pubblico NON può instaurare una connessione verso server con indirizzi privati."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "45",
+  "question": "Nella gerarchia della base dati del DNS (Domain Name System) si chiama server di competenza (authoritative server):",
+  "answers": {
+    "A": "Il server che ha la responsabilità amministrativa di uno specifico dominio, ad esempio mycompany.com, e quindi è la fonte primaria delle informazioni nel DNS relative a quel dominio.",
+    "B": "Il server che viene configurato dal DHCP per consentire agli host la risoluzione dei nomi a dominio, e quindi ha la competenza per risolvere gli indirizzi di tutto Internet per gli host di uno specifico dominio, ad esempio mycompany.com.",
+    "C": "Tutti i server TLD (Top Level Domain), perché hanno la competenza e l’autorità di re-dirigere le richieste verso i server locali che consentono la traduzione finale degli FQDN (Fully Qualified Domain Name).",
+    "D": "I server, o gruppo di server, radice che ha la competenza per una delle 13 aree in cui sono suddivisi i nomi di Internet."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "46",
+  "question": "Quale caratteristica di IPv4 non viene di fatto implementata in IPv6?",
+  "answers": {
+    "A": "La frammentazione, che in IPv6 viene demandata alla Path MTU Discovery.",
+    "B": "L’indirizzamento unicast, sostituito in IPv6 dall’indirizzamento anycast (ricezione da almeno una interfaccia del nodo destinazione).",
+    "C": "Gli strumenti di sicurezza (IPSec per IPv4), che in IPv6 vengono demandati ai livelli superiori (ad esempio TLS).",
+    "D": "Le opzioni aggiuntive negli header, in IPv6 l’header è di lunghezza fissa e non estendibile."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "47",
+  "question": "Quale delle seguenti affermazioni sui Cookies è corretta?",
+  "answers": {
+    "A": "Tutti i Cookies devono essere espressamente eliminati dal browser, altrimenti restano validi per sempre (almeno finché il sito web e il browser del client esistono).",
+    "B": "I Cookies non possono consentire di mantenere aperta una sessione utente tra diverse visite (evitando il reinserimento della password, per esempio), perché non sono stati pensati per applicazioni di sicurezza come il login remoto.",
+    "C": "I Cookies identificano lo stato di una transazione tra un browser ed un sito web, sono settati dal server sul client nella prima risposta HTTP, e vengono inviati dal client verso il server ogniqualvolta il browser visita lo stesso sito web.",
+    "D": "I Cookies identificano lo stato di una transazione tra un browser ed un sito web, sono settati dal server sul client durante l’handshake e riscontrati dal client nella prima richiesta HTTP, e vengono inviati dal server verso il client ogniqualvolta il browser visita lo stesso sito web."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "48",
+  "question": "Quale di queste affermazioni è corretta? ",
+  "answers": {
+    "A": "Il rate RR di una trasmissione deve essere maggiore della capacità CC del canale per garantire (in teoria) che esista un meccanismo per il recupero dei bit in ricezione senza errori.",
+    "B": "La capacità CC di un canale individua il massimo rate RR per il quale è garantito (in teoria) che esista un meccanismo per la decodifica dell’informazione in ricezione senza errori.",
+    "C": "Il rate RR di una trasmissione è pari alla capacità CC del canale quando la banda BB del canale trasmissivo è utilizzata interamente.",
+    "D": "La capacità CC di un canale individua il massimo rate RR per il quale è teoricamente possibile occupare una banda BB del canale trasmissivo pari a RR."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "49",
+  "question": "Qual è la funzione della ARP cache?",
+  "answers": {
+    "A": "Serve a tener traccia (temporanea) delle corrispondenze note tra indirizzo MAC e indirizzo IP, in questo modo evita di mandare una trama ad un indirizzo IP errato o inesistente.",
+    "B": "Serve a velocizzare il processo di binding tra indirizzo MAC e indirizzo IP, perché il processo di costruzione della cache non necessita del processo di ARP request/response.",
+    "C": "Serve a tener traccia (temporanea) delle corrispondenze note tra indirizzo MAC e indirizzo IP, evitando di ripetere la risoluzione per un pacchetto IP il cui corrispondente indirizzo MAC è già in cache.",
+    "D": "Serve a velocizzare il processo di binding tra indirizzo MAC e indirizzo IP, perché il server che contiene l’ARP cache comunica preventivamente le corrispondenze tra indirizzo MAC e indirizzo IP a lui note."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "50",
+  "question": "Qual è la funzione della porta, rappresentata da un numero di 16 bit?",
+  "answers": {
+    "A": "Identifica il processo di livello applicativo che ha invocato l’entità di trasporto. Un processo può essere associato a più porte.",
+    "B": "Identifica l’entità di trasporto invocata da un processo di livello applicativo. Ogni porta è associata ad un particolare protocollo di livello applicativo.",
+    "C": "Identifica il protocollo di livello applicativo utilizzato da un processo. Ogni porta è associata ad un particolare protocollo.",
+    "D": "Identifica il processo di livello applicativo che ha invocato l’entità di trasporto. L’identificazione tra processo e porta deve essere uno-a-uno."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "51",
+  "question": "Quali sono le caratteristiche funzionali principali del protocollo HTTP?",
+  "answers": {
+    "A": "Il client (browser) apre una o più connessioni TCP con la porta 80 del server (web server), avviene uno scambio di messaggi HTTP. Le connessioni vengono chiuse dal client o dal server in funzione della dinamica dell’applicazione, in genere con un “reset.” HTTP, al contrario di TCP, è un protocollo che non mantiene informazioni di stato.",
+    "B": "Il client (browser) apre una connessione TCP dalla porta 80 con una porta effimera del server (web server), avviene uno scambio di messaggi HTTP, e poi la connessione viene chiusa dal server. HTTP, come TCP, è un protocollo che mantiene informazioni di stato per riscontrare gli oggetti ricevuti.",
+    "C": "Il client (browser) apre una connessione TCP dalla porta 80 con una porta effimera del server (web server), avviene uno scambio di messaggi HTTP, e poi la connessione viene chiusa dal server. HTTP, al contrario di TCP, è un protocollo che non mantiene informazioni di stato.",
+    "D": "Il client (browser) apre una connessione TCP con la porta 80 del server (web server), avviene uno scambio di messaggi HTTP, e poi la connessione viene chiusa quando la ricezione degli oggetti viene confermata dal client. HTTP, come TCP, è un protocollo che mantiene informazioni di stato per riscontrare gli oggetti ricevuti."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "52",
+  "question": "Quale tra le seguenti affermazioni descrive meglio il rapporto tra livello fisico e livello data link?",
+  "answers": {
+    "A": "Il livello Data-Link utilizza i servizi offerti dal livello fisico (essenzialmente, la trasmissione fisica dei bit), ma in accordo con la separazione logica tra livelli il progetto del livello Data-Link è indipendente dal particolare livello fisico sottostante.",
+    "B": "Il livello Data-Link organizza logicamente il flusso di bit trasmesso a livello fisico, e generalmente ciò comporta la trasmissione di più bit rispetto a quanto strettamente necessario per il payload.",
+    "C": "Dal punto di vista della rilevazione di errore, il livello fisico si occupa della rilevazione di errori a livello di bit (ad esempio, osservando violazioni della codifica di linea), quello Data-Link a livello di trama.",
+    "D": "Il livello fisico incapsula le trame usando specifici header (ad esempio, Start Of Frame) e spaziandole con periodi di silenzio (ad esempio, Inter Frame Gap) per poterle differenziare in ricezione."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "52",
+  "question": "Quale tra le seguenti affermazioni sulle applicazioni di Internet è SBAGLIATA?",
+  "answers": {
+    "A": "Gli eventuali requisiti di privacy nelle applicazioni sono più facili da raggiungere se le applicazioni sono in cloud rispetto a quelle con architettura peer-to-peer (ogni peer rinuncia di fatto alla privacy rispetto agli altri).",
+    "B": "Le applicazioni real-time non possono tollerare ritardi, ma possono talvolta tollerare perdite di dati e scarso throughput.",
+    "C": "Le applicazioni di trasferimento dati (come FTP) non possono tollerare la perdita di dati, ma possono talvolta tollerare un lieve ritardo e scarso throughput.",
+    "D": "Le applicazioni di instant messaging e la posta elettronica hanno in generale requisiti di ritardo e throughput non troppo stringenti, ma non possono tollerare la perdita di dati."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "52",
+  "question": "Quali valori può assumere la MTU?",
+  "answers": {
+    "A": "Il valore minimo è 576B, lo standard di fatto è 1500B (MTU di Ethernet).",
+    "B": "Il valore minimo è 576B, lo standard di fatto è 1538B (MTU di Ethernet).",
+    "C": "Il valore minimo è 64B (per permettere a CSMA/CD di Ethernet di funzionare), lo standard di fatto è 1538B (MTU di Ethernet).",
+    "D": "Il valore minimo è 64B (per permettere a CSMA/CD di Ethernet di funzionare), lo standard di fatto è 1500B (MTU di Ethernet)."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "53",
+  "question": "Quali delle seguenti affermazioni sull’header IP è VERA?",
+  "answers": {
+    "A": "Il campo IP destinazione viene aggiornato a ogni inoltro, mettendo l’indirizzo del Next-Hop.",
+    "B": "Il campo TTL viene decrementato solo alla destinazione.",
+    "C": "La lunghezza complessiva dell’header IP, compresa di eventuali opzioni, deve essere un multiplo intero di 32 bit.",
+    "D": "Il campo checksum consente la rilevazione di errori sull’intero datagramma, incluso il payload."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "54",
+  "question": "Si consideri una generica trama F e sia t0 l’istante di inizio della trasmissione della trama F. Si ricordi la definizione di tempo di vulnerabilità Tv per una trama F, ovvero l’intervallo temporale all’interno del quale la generazione di una trama da parte di un’altra stazione porta ad una collisione. Nel protocollo slotted Aloha con slot di durata temporale T, quanto vale Tv?",
+  "answers": {
+    "A": "Tv=T. In particolare la trama considerata collide con tutte le trame generate nello slot (di durata T) precedente al tempo t0.",
+    "B": "Tv=2T. In particolare la trama considerata collide con tutte le trame generate nell’intervallo T di trasmissione della trama stessa, e con quelle generate nello slot precedente.",
+    "C": "Tv=T/2. In particolare la trama considerata collide solamente con le trame generate prima di t0, ma non con quelle generate nella prima parte dello slot precedente perché sono già state trasmesse.",
+    "D": "Tv=T. In particolare la trama considerata collide con tutte le trame generate nell’intervallo T di trasmissione della trama stessa, quindi tra t0 e t0+T."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "55",
+  "question": "Si considerino le funzioni proprie di un router. L’operazione di forwarding:",
+  "answers": {
+    "A": "Modifica le intestazioni di livello fisico e data-link (livelli 1 e 2) per poter inoltrare il pacchetto su un’interfaccia diversa da quella da cui l’ha ricevuto; la decisione di instradamento dipende dall’intestazione del datagramma, che non deve mai essere modificata per consentire la corretta ricezione al destinatario.",
+    "B": "Opera in base all’intestazione del datagramma, prendendo delle decisioni di instradamento che dipendono dal contenuto di questa intestazione, e aggiungendo l’indirizzo del prossimo router verso la destinazione (next hop) all’interno dell’intestazione.",
+    "C": "Opera in base all’intestazione del datagramma, prendendo delle decisioni di instradamento che dipendono dal contenuto di questa intestazione ed eventualmente modificandola prima di inoltrarla verso la destinazione (o un altro router).",
+    "D": "Prende la decisione di instradamento in base all’intestazione del datagramma, e inoltra il pacchetto verso la destinazione trasformando l’indirizzo della destinazione finale in un indirizzo di livello 2 per poter effettuare la consegna sulla rete fisica."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "56",
+  "question": "Sotto opportune ipotesi semplificative (numero infinito di stazioni, tempo di trama fisso, generazione delle trame per ogni stazione che segue un processo di Poisson e stazione bloccata durante la trasmissione, tempo di ritrasmissione molto maggiore del tempo di trama), e detto G il traffico medio offerto da ogni stazione (espresso in trame offerte per tempo di trama e comprensivo delle ritrasmissioni), quanto vale il throughput per i protocolli di accesso al mezzo Aloha e Slotted Aloha?",
+  "answers": {
+    "A": "G⋅e−2G per Aloha e G⋅e−G per Slotted Aloha, il throughput massimo di Slotted Aloha è il doppio di quello di Aloha.",
+    "B": "G⋅e−2G per Aloha e 2G⋅e−2G per Slotted Aloha, il throughput massimo di Slotted Aloha è il doppio di quello di Aloha.",
+    "C": "G⋅e−G per Aloha e 2G⋅e−G per Slotted Aloha, il throughput massimo di Slotted Aloha è il doppio di quello di Aloha.",
+    "D": "G⋅e−G per Aloha e G⋅e−2G per Slotted Aloha, il throughput massimo di Slotted Aloha è e volte quello di Aloha."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "57",
+  "question": "TCP per aprire una connessione logica tra un client e un server effettua una procedura chiamata Three Way Handshake iniziata dal client. Durante questa procedura, chiamando rispettivamente S1, S2 e S3 i tre messaggi scambiati tra client e server si ha:",
+  "answers": {
+    "A": "Flag SYN: vale 1 in S1 e S2, e 0 in S3; Campo Sequence Number: ha un valore in S1 e S2 che dipende dalle dimensioni dell’oggetto da trasferire sulla connessione TCP (ISN1 e ISN2), in S3 ha un valore uguale alla dimensione in byte del segmento trasmesso, eventualmente uguale a zero se il segmento non contiene dati; Flag ACK: vale 0 in S1, 1 in S2 e S3; Campo Acknowledgement Number: indefinito in S1, vale ISN1+1 in S2 e ISN2+1 in S3.",
+    "B": "Flag SYN: vale 1 in S1 e S2, e 0 in S3; Campo Sequence Number: ha un valore fisso che dipende dall’host in S1 e S2 (ISN1 e ISN2 rispettivamente) da cui TCP comincia a contare le proprie PDU (in byte), in S3 indica effettivamente il “sequence number” del primo byte del segmento; Flag ACK: vale 1 in S1 e S2, e 0 in S3; Campo Acknowledgement Number: indefinito in S1, S2 e S3.",
+    "C": "Flag SYN: vale 1 in S1, S2 e S3; Campo Sequence Number: ha un valore generato casualmente in S1, S2 e S3 (ISN1, ISN2 e ISN3 rispettivamente) da cui TCP comincia a contare le proprie PDU (in byte); Flag ACK: vale 0 in S1, S2 e S3, perché i segmenti non contengono dati da riscontrare; Campo Acknowledgement Number: indefinito in S1, S2 e S3.",
+    "D": "Flag SYN: vale 1 in S1 e S2, e 0 in S3; Campo Sequence Number: ha un valore generato casualmente in S1 e S2 (ISN1 e ISN2 rispettivamente) da cui TCP comincia a contare le proprie PDU (in byte), in S3 indica effettivamente il “sequence number” del primo byte del segmento; Flag ACK: vale 1 in S2 e S3, e 0 in S1; Campo Acknowledgement Number: indefinito in S1, vale ISN1+1 in S2 e ISN2+1 in S3."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "58",
+  "question": "Tra le funzioni fondamentali del livello trasporto la multiplazione è tra le più fondamentali, perché?",
+  "answers": {
+    "A": "Definisce in modo chiaro i punti di accesso alla rete, evitando che le informazioni di host diversi vengano confuse tra loro.",
+    "B": "Consente la coesistenza di un numero arbitrario di applicazioni sullo stesso protocollo di trasporto.",
+    "C": "Consente la coesistenza di diverse connessioni TCP per una stessa applicazione (ad esempio HTTP) migliorando la velocità di trasferimento.",
+    "D": "Consente di identificare i flussi dei dati in modo univoco in qualsiasi punto della rete."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "59",
+  "question": "UDP (User Datagram Protocol) è, insieme a TCP, il più diffuso protocollo di livello trasporto in Internet. Quali dei seguenti gruppi di funzioni vengono implementate in UDP?",
+  "answers": {
+    "A": "Multiplazione e demultiplazione; Incapsulamento dei dati di livello applicativo; Consegna dei dati al livello applicativo; Setup della connessione.",
+    "B": "Multiplazione e demultiplazione; Incapsulamento dei dati di livello applicativo; Consegna dei dati al livello applicativo; Controllo di flusso ma non di congestione.",
+    "C": "Multiplazione e demultiplazione; Incapsulamento dei dati di livello applicativo; Consegna dei dati al livello applicativo; Controllo di correttezza opzionale.",
+    "D": "Multiplazione e demultiplazione; Incapsulamento dei dati di livello applicativo; Consegna in ordine dei dati al livello applicativo."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "60",
+  "question": "Un dispositivo NAT (Network Address Translation):",
+  "answers": {
+    "A": "È un dispositivo che consente a host con indirizzo IP privato di accedere a Internet cambiando l’indirizzo IP sorgente dei pacchetti in uscita e di conseguenza quello destinazione dei pacchetti in ingresso.",
+    "B": "È un dispositivo che consente a host con indirizzo IP privato di accedere a Internet cambiando l’indirizzo IP destinazione dei pacchetti in uscita e di conseguenza quello sorgente dei pacchetti in ingresso.",
+    "C": "È un qualsiasi router che capisce gli indirizzi IP privati.",
+    "D": "È un router che collega una subnet privata a una subnet pubblica."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "61",
+  "question": "Un dispositivo di tipo NAT (Network Address Translator) permette a dei dispositivi con indirizzo IP privato di accedere ad Internet. In che modo?",
+  "answers": {
+    "A": "Intercettando i segmenti TCP o i datagrammi UDP “impersonando” l’host con indirizzo IP privato. Ad esempio, nel caso l’host interno alla rete privata tenti di instaurare una connessione TCP, il NAT risponde come se fosse l’host di destinazione e, al contempo, instaura una connessione TCP fra di esso e l’effettivo host di destinazione. Una volta instaurate le due connessioni, il NAT si occupa di trasferire i segmenti da una connessione all’altra.",
+    "B": "Impersonando la destinazione in base al servizio richiesto. Ad esempio, nel caso in cui l’host con indirizzo IP privato stia tentando di visitare un sito web attraverso richieste HTTP, il NAT interpreta la richiesta HTTP, si collega all’effettiva destinazione ed effettua la richiesta HTTP al posto dell’host interno, inoltrando poi la risposta al client.",
+    "C": "Modificando l’indirizzo IP sorgente, impostandolo come l’indirizzo IP pubblico dell’interfaccia del NAT esposta verso Internet e, se necessario, modificando la porta sorgente. Nell’effettuare tale operazione, il dispositivo salva tale mappatura in una tabella in modo da poter fare la conversione inversa sui pacchetti di ritorno.",
+    "D": "Incapsulando il pacchetto con indirizzo IP privato all’interno di un altro pacchetto IP (tunneling IP) avente come IP sorgente l’indirizzo IP pubblico dell’interfaccia del NAT esposta verso Internet e come destinazione l’effettiva destinazione. Il ricevitore risponderà con un incapsulamento simile (solamente a indirizzi invertiti) permettendo poi al NAT di decapsulare la risposta e inoltrarla all’interno della rete privata come un normale pacchetto IP."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "62",
+  "question": "Un grafo G=(V,A) rappresenta correttamente una rete di telecomunicazione quando:",
+  "answers": {
+    "A": "V è l’insieme dei dispositivi della rete, inclusi i terminali, e A è l’insieme delle funzioni logiche implementate che consentono l’interconnessione di dispositivi e terminali",
+    "B": "V è l’insieme dei commutatori della rete e A è l’insieme dei canali di trasmissione che interconnettono i commutatori.",
+    "C": "V è l’insieme dei nodi della rete e A è l’insieme delle schede di rete che consentono la trasmissione sui canali trasmissivi.",
+    "D": "V è l’insieme dei canali di trasmissione e A è l’insieme delle funzioni di commutazione che li interconnettono."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "63",
+  "question": "Un messaggio di posta elettronica con un allegato in formato JPEG (immagine):",
+  "answers": {
+    "A": "Contiene nel corpo del messaggio l’URL (Universal Resource Locator) da cui lo User Agent di posta può scaricare l’immagine; nell’intestazione deve essere specificato l’uso del protocollo da usare per scaricare l’immagine, ad esempio HTTP, MIME, FTP.",
+    "B": "È un normale messaggio di posta che alla fine contiene il file binario codificato JPEG con l’immagine, l’intestazione indica il numero di allegati presenti.",
+    "C": "Contiene nel corpo del messaggio il file immagine codificato JPEG; nell’intestazione deve essere specificato l’uso dei formati MIME (Multimedia Internet Mail Extension) e la versione di MIME, il contenuto del file e l’indicazione dell’applicativo usato per produrre il file.",
+    "D": "Contiene nel corpo del messaggio il file immagine codificato base64’; nell’intestazione deve essere specificato l’uso dei formati MIME (Multimedia Internet Mail Extension) e la versione di MIME, il codice usato per rendere il file compatibile con SMTP e il tipo di contenuto del file stesso."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "64",
+  "question": "Un host con indirizzo 162.168.0.15/16 effettua una consegna diretta dei datagrammi ai seguenti range di indirizzi:",
+  "answers": {
+    "A": "162.168.0.1--162.168.255.255",
+    "B": "162.168.0.0--162.168.0.255",
+    "C": "162.168.16.0--162.168.255.255",
+    "D": "162.168.0.2--162.168.255.254 (.0.1 è riservato al router e .255.255 non è un indirizzo unicast)"
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "64",
+  "question": "Un protocollo di livello trasporto:",
+  "answers": {
+    "A": "Fornisce una astrazione end-to-end dell’intera rete, consentendo ai protocolli di livello applicativo di conoscere i dettagli e la topologia della rete sottostante quando ne hanno bisogno.",
+    "B": "Fornisce una astrazione end-to-end dell’intera rete, nascondendo ai protocolli di livello applicativo qualsiasi dettaglio dei livelli sottostanti, inclusa la topologia della rete.",
+    "C": "Consente di effettuare l’instradamento delle connessioni su IP anche se IP è un protocollo a commutazione di pacchetto.",
+    "D": "Consente di gestire connessioni unicast tra sorgente e destinazione, per le connessioni multicast invece le applicazioni devono per forza usare direttamente il livello IP per controllare l’opportuna duplicazione delle informazioni verso i molti utenti."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "65",
+  "question": "Un segmento TCP con il flag di ACK posto a 1:",
+  "answers": {
+    "A": "È un segmento di riscontro, l’ACK Number è nel payload.",
+    "B": "È un segmento di riscontro, il campo ACK Number dell’header è valido.",
+    "C": "È un segmento di riscontro, e non può contenere dati.",
+    "D": "Può essere un segmento di riscontro, non lo è nei casi in cui anche SYN o FIN siano a 1 (handshake e gentle closure)."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "66",
+  "question": "Una architettura protocollare:",
+  "answers": {
+    "A": "È la descrizione di tutte e sole le funzioni essenziali e obbligatorie per il corretto funzionamento di una rete di telecomunicazione; i singoli protocolli implementano tutte queste funzioni ed eventualmente altre funzioni aggiuntive. Nella descrizione dell’architettura, tuttavia, non vengono mai incluse funzioni che non siano essenziali.",
+    "B": "È la descrizione, al più alto livello di astrazione, dell’organizzazione fisica di una rete di telecomunicazione, dei suoi dispositivi e dei suoi canali di comunicazione.",
+    "C": "È la descrizione, al più alto livello di astrazione, dell’organizzazione logica di una rete di telecomunicazione.",
+    "D": "È la descrizione dettagliata delle funzioni di un protocollo, indipendentemente dal suo livello protocollare."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "67",
+  "question": "Una Subnet Mask di un indirizzo IPv4 è una sequenza di 32 bit in cui:",
+  "answers": {
+    "A": "Tutti i bit corrispondenti alla parte netID dell’indirizzo sono posti a 1 mentre i bit corrispondenti alla parte hostID replicano i bit dell’indirizzo stesso.",
+    "B": "I bit più a sinistra sono i bit dell’indirizzo di rete (netID), mentre i bit più a destra sono messi a 0 per “mascherare” l’hostID.",
+    "C": "Tutti i bit corrispondenti alla parte netID dell’indirizzo sono posti a 0 e tutti i bit corrispondenti alla parte hostID sono messi a 1.",
+    "D": "Tutti i bit corrispondenti alla parte netID dell’indirizzo sono posti a 1 e tutti i bit corrispondenti alla parte hostID sono messi a 0."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "68",
+  "question": "Uno switch Ethernet:",
+  "answers": {
+    "A": "Spezza sia il dominio di broadcast sia il dominio di collisione.",
+    "B": "Spezza il dominio di collisione ma non il dominio di broadcast.",
+    "C": "Spezza il dominio di broadcast ma non il dominio di collisione.",
+    "D": "Non spezza né il dominio di broadcast né il dominio di collisione."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "69",
+  "question": "Uno Switch Ethernet:",
+  "answers": {
+    "A": "È un router in grado di operare su una LAN Ethernet.",
+    "B": "È un dispositivo multiporta store-and-forward in grado di ricevere trame da tutte le porte e di inoltrare le trame unicast selettivamente sulla porta corretta, e replicare le trame broadcast su tutte le porte.",
+    "C": "È un dispositivo multiporta store-and-forward in grado di ricevere trame da tutte le porte e scartarle se sono errate. Le trame corrette vengono re-inoltrate su tutte le porte per rispettare il dominio di broadcast.",
+    "D": "È un repeater multi-porta che copia le trame bit-a-bit su tutte le porte."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "70",
+  "question": "WiFi, ovvero 802.11, è un protocollo di livello MAC basato su CSMA/CA, ovvero Carrier Sense Multiple Access with Collision Avoidance. Per quale motivo non si utilizza Collision Detection come in Ethernet?",
+  "answers": {
+    "A": "Perchè nelle reti wireless la potenza ricevuta è diversi ordini di grandezza inferiore alla potenza trasmessa, rendendo impossibile rilevare una seconda trasmissione.",
+    "B": "Non c’è una ragione specifica, è un accidente storico in quanto l’evoluzione dello standard 802.11 è stato principalmente dettato da logiche commerciali.",
+    "C": "Perchè nelle reti wireless si possono avere al ricevitore segnali generati da più trasmettitori contemporaneamente e quindi non ha senso rilevare le collisioni.",
+    "D": "Perchè nelle reti wireless non si può ascoltare il canale, come invece avviene su connessioni cablate in cui si ha un unico punto di accesso al canale."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "71",
+  "question": "WiFi, ovvero 802.11, è un protocollo di livello MAC basato su CSMA/CA, ovvero Carrier Sense Multiple Access with Collision Avoidance, dove CA significa che:",
+  "answers": {
+    "A": "Esiste una procedura di risoluzione delle contese basato su una procedura di backoff che evita le collisioni, questa procedura viene svolta periodicamente, precisamente ogni TXOP secondi.",
+    "B": "Viene implementato un handshake preliminare per prenotare il canale e eliminare le collisioni.",
+    "C": "Quando le stazioni rilevano il canale occupato restano in ascolto e, quando il canale si libera, effettuano una procedura di backoff estraendo un numero casuale di slot in una data finestra di contesa. Ciascuna stazione fa il countdown degli slot e trasmette quando raggiunge 0, il countdown si interrompe se nel frattempo il canale diventa occupato.",
+    "D": "Quando le stazioni rilevano il canale occupato restano in ascolto e, quando il canale si libera, estraggono una variabile casuale per decidere se trasmettere immediatamente oppure rimandare la trasmissione in un tempo futuro scelto a caso (p-persistenza)."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "72",
+  "question": "Un router è dotato di due interfacce di rete, entrambe Ethernet, ma su due schede (NIC) diverse, chiamate A e B per semplicità. Quando un datagramma è inoltrato da A a B:",
+  "answers": {
+    "A": "Il router estrae il datagramma IP dalla trama Ethernet della scheda A memorizzando l’indirizzo MAC sorgente (chiamato MAC-IN). Quindi modifica TTL, ricalcola il Checksum e incapsula il datagramma IP nella trama Ethernet della scheda B mettendo come indirizzo MAC sorgente MAC- IN e come indirizzo MAC destinazione quello del next-hop selezionato.",
+    "B": "Il router estrae il datagramma IP dalla trama Ethernet della scheda A memorizzando l’indirizzo MAC sorgente (chiamato MAC-IN). Quindi modifica TTL, ricalcola il Checksum e incapsula il datagramma IP nella trama Ethernet della scheda B, mettendo come indirizzo MAC sorgente MAC- IN e come indirizzo MAC destinazione quello del destinatario finale del datagramma.",
+    "C": "Il router estrae il datagramma IP dalla trama Ethernet della scheda A (gli indirizzi MAC sono eliminati). In seguito decrementa TTL e, se TTL > 0, incapsula il datagramma IP nella trama Ethernet della scheda B, mettendo come indirizzo MAC sorgente il proprio e come indirizzo MAC destinazione quello del next-hop selezionato e ricalcola il checksum del livello MAC.",
+    "D": "Il router estrae il datagramma IP dalla trama Ethernet della scheda A (gli indirizzi MAC sono eliminati). In seguito controlla TTL senza modificarlo, se TTL > 0, ricalcola il Checksum e incapsula il datagramma IP nella trama Ethernet della scheda B, se invece TTL = 0 consegna il datagramma ai livelli superiori perché è arrivato a destinazione."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "73",
+  "question": "In che modo un ricevitore TCP implementa il controllo di flusso (per quanto gli compete)?",
+  "answers": {
+    "A": "Inviando segmenti vuoti con il flag RWND settato e nel campo Dimension la quantità di spazio ancora libero nel buffer di ricezione.",
+    "B": "Inviando nel campo RWND degli ACK validi la quantità di spazio ancora libero nel buffer di ricezione in numero di segmenti.",
+    "C": "Inviando nel campo RWND la quantità di dati attualmente memorizzata nel buffer di ricezione.",
+    "D": "Inviando nel campo RWND degli ACK validi la quantità di spazio (espresso in byte) ancora libero nel buffer di ricezione."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "74",
+  "question": "In un Record di tipo MX del DNS (Domain Name System):",
+  "answers": {
+    "A": "Il campo name è il nome del dominio; il campo value è il nome dell’host che ospita il server di posta elettronica per quel dominio.",
+    "B": "Il campo name è il nome alias dell’host; il campo value è il nome autentico o ‘canonico’.",
+    "C": "Il campo name è il nome del dominio; il campo value è l’indirizzo IP del server TLD o comunque del server gerarchicamente superiore nel DNS.",
+    "D": "Il campo name è il nome del dominio; il campo value è il nome del server di competenza per quel dominio."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "75",
+  "question": "Alcuni switch Ethernet implementano la funzione di proxy ARP, ovvero sono in grado di rispondere a una richiesta ARP (Address Resolution Protocol) al posto dell’host target. Come imparano le associazioni tra indirizzo MAC ed indirizzo IP?",
+  "answers": {
+    "A": "Osservando il traffico in transito e memorizzando l’associazione presente nelle trame in una tabella locale e temporanea.",
+    "B": "Interrogando il server DHCP (Dynamic Host Configuration Protocol) periodicamente per tenere aggiornata la tabella locale in base alle assegnazioni del DHCP.",
+    "C": "Interrogando periodicamente tutte le interfacce degli host a lui collegati per tenere aggiornata la tabella locale indipendentemente dal server DHCP.",
+    "D": "Osservando il traffico in transito e inviando dei comandi di “ping” per verificare lo stato delle interfacce degli host."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "76",
+  "question": "Quali valori può assumere la MTU?",
+  "answers": {
+    "A": "Qualsiasi valore sia deciso dal protocollo di livello Data-Link. Tuttavia il valore minimo è 64 B (per permettere a CSMA/CD di Ethernet di funzionare), lo standard di fatto è 1538 B (MTU di Ethernet).",
+    "B": "Il valore minimo è 576 B, ma tutti i protocolli Data-Link negoziano con il livello IP per trovare il valore ottimo.",
+    "C": "Qualsiasi valore sia deciso dal protocollo di livello Data-Link. Tuttavia il valore minimo è 576 B e lo standard di fatto è 1500 B (MTU di Ethernet).",
+    "D": "Qualsiasi valore sia deciso dal protocollo di livello Data-Link. Tuttavia il valore minimo è 64 B (per permettere a CSMA/CD di Ethernet di funzionare), lo standard di fatto è 1500 B (MTU di Ethernet)."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "77",
+  "question": "Si consideri una generica trama F e sia t0 l’istante di inizio della trasmissione della trama F. Si ricordi la definizione di tempo di vulnerabilità Tv per una trama F, ovvero l’intervallo temporale all’interno del quale la generazione di una trama da parte di un’altra stazione porta ad una collisione. Nel protocollo slotted Aloha con slot di durata temporale T, quanto vale Tv?",
+  "answers": {
+    "A": "Tv=T/2. In particolare la trama considerata collide solamente con le trame generate prima di t0, ma non con quelle generate nella prima parte dello slot precedente perché sono già state trasmesse.",
+    "B": "Tv=T. In particolare la trama considerata collide con tutte le trame generate nell’intervallo T di trasmissione della trama stessa, quindi tra t0 e t0+T.",
+    "C": "Tv=T. In particolare la trama considerata collide con tutte le trame generate nello slot (di durata T) precedente al tempo t0, quindi tra t0−T e t0.",
+    "D": "Tv=2T. In particolare la trama considerata collide con tutte le trame generate nell’intervallo T di trasmissione della trama stessa, e con quelle generate nello slot precedente, quindi tra t0−T e t0+T."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "78",
+  "question": "Quali tra le seguenti funzioni NON rientra tra quelle svolte dal livello DL (Data-Link)?",
+  "answers": {
+    "A": "Il livello DL opera un controllo di flusso, per evitare di causare un overflow nel buffer di un ricevitore lento a smaltire le trame inviate da un trasmettitore veloce.",
+    "B": "Per apparire ai livelli superiori come un data pipe (“tubo di dati”), il livello DL opera il riordino dei bit arrivati fuori sequenza prima della consegna della trama al livello di rete.",
+    "C": "Il livello DL coordina l’accesso ad un mezzo broadcast condiviso, attraverso specifici protocolli MAC (Medium Access Control).",
+    "D": "Il livello DL si occupa del framing, cioè la delimitazione delle diverse unità dati (trame), per poterle distinguere temporalmente le une dalle altre."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "79",
+  "question": "Il protocollo ICMP (Internet Control Message Protocol):",
+  "answers": {
+    "A": "È un protocollo di supporto a IP i cui messaggi, incapsulati direttamente in un datagramma IP, servono a notificare a una interfaccia IP stati e condizioni della rete come ad esempio: la raggiungibilità di una interfaccia o di una sottorete, condizioni di errore come TTL (Time To Live) = 0, o la mancanza di un percorso valido verso l’host selezionato dall’indirizzo IP (no route to host).",
+    "B": "È un protocollo di supporto a IP i cui messaggi, veicolati attraverso una connessione TCP per affidabilità, servono a notificare a un host stati e condizioni della rete come ad esempio: la raggiungibilità di una interfaccia o di una sottorete, condizioni di errore come TTL (Time To Live) = 0, o la mancanza di un percorso valido verso l’host selezionato dall’indirizzo IP (no route to host).",
+    "C": "È un protocollo applicativo di supporto a IP i cui messaggi, incapsulati in un datagramma UDP, consentono di realizzare i comandi “ping” e “traceroute” per scoprire l’esistenza di un host con un dato indirizzo IP e il percorso effettuato per raggiungerlo.",
+    "D": "È un protocollo applicativo di supporto a IP i cui messaggi, incapsulati in un datagramma UDP, servono a notificare a una interfaccia IP stati e condizioni della rete come ad esempio: la raggiungibilità di una interfaccia o di una sottorete, condizioni di errore come TTL (Time To Live) = 0, o la mancanza di un percorso valido verso l’host selezionato dall’indirizzo IP (no route to host)."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "80",
+  "question": "Un trama Ethernet inizia con:",
+  "answers": {
+    "A": "Indirizzo MAC destinazione che è il primo campo che devono leggere gli switch per inoltrare la trama.",
+    "B": "Il campo CRC per controllare la correttezza della trama e scartarla se contiene errori.",
+    "C": "Un preambolo di 10101010...usato per sincronizzare il ricevitore terminato dal byte 10101011 che indica l’inizio della trama vera e propria.",
+    "D": "Indirizzo MAC sorgente per capire da chi proviene la trama e gestirla correttamente."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "81",
+  "question": "Quali destinazioni verranno raggiunte da un datagramma con indirizzo destinazione 255.255.255.255 (limited broadcast) generato da un host che insiste sulla subnet 78.91.2.0/23?",
+  "answers": {
+    "A": "Tutti i nodi di Internet, limitatamente agli indirizzi unicast pubblici.",
+    "B": "Tutti i nodi della subnet, limitatamente a quelli con funzioni di server (DHCP, DNS, ecc.).",
+    "C": "Gli stessi nodi che sarebbero raggiunti da un datagramma con indirizzo 78.91.255.255.",
+    "D": "Gli stessi nodi che sarebbero raggiunti da un datagramma con indirizzo 78.91.3.255."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "82",
+  "question": "Il numero di livelli nell’architettura protocollare di Internet:",
+  "answers": {
+    "A": "È variabile tra 3 e 6 a seconda dell’applicazione che si usa.",
+    "B": "È pari a 5: Fisico, Collegamento, Rete, Trasporto, Applicazione.",
+    "C": "È pari a 7: Fisico, Collegamento, Rete, Trasporto, Sessione, Presentazione, Applicazione.",
+    "D": "È variabile tra 3 e 5 a seconda del mezzo trasmissivo usato."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "83",
+  "question": "Un protocollo CSMA (Carrier Sense Multiple Access) p-persistente, quando ha una trama da trasmettere, ascolta il canale e se lo trova occupato:",
+  "answers": {
+    "A": "Trasmette la trama con probabilità p e con probabilità 1-p la scarta non avendo un buffer di attesa per le trasmissioni.",
+    "B": "Attende che il canale si liberi e quando il canale è libero trasmette la trama con probabilità p e con probabilità 1-p allo slot successivo, essendo un protocollo slotted.",
+    "C": "Trasmette la trama in ogni caso per forzare una collisione e poter attivare l’algoritmo di backoff esponenziale che risolve la contesa.",
+    "D": "Attende che il canale si liberi e quando il canale si libera trasmette la trama con probabilità p, viceversa, con probabilità 1-p rimanda la trasmissione per un tempo t’ molto maggiore del tempo di trasmissione della trama."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "84",
+  "question": "Nel sistema di posta elettronica di Internet, quando si usa un client di posta locale e non un “web- service,” vengono usati due diversi protocolli: SMTP, e POP oppure IMAP. Qual è la configurazione corretta del sistema?",
+  "answers": {
+    "A": "SMTP tra server sia per inviare che per ricevere messaggi, e dagli User Agent per inviare i messaggi; POP oppure IMAP dagli User Agent per ricevere i messaggi.",
+    "B": "SMTP tra server sia per inviare che per ricevere messaggi; POP oppure IMAP dagli User Agent per ricevere e inviare i messaggi.",
+    "C": "SMTP per inviare messaggi; POP oppure IMAP per riceverli.",
+    "D": "SMTP tra server sia per inviare che per ricevere messaggi, e dagli User Agent per inviare i messaggi se usano POP per riceverli; se uno User Agent usa IMAP lo usa sia per ricevere che per inviare i messaggi."
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "85",
+  "question": "Quale di queste affermazioni è corretta?",
+  "answers": {
+    "A": "La capacità C di un canale AWGN, in base alla formula di Shannon, individua il massimo rate R per il quale è teoricamente possibile occupare una banda B del canale trasmissivo pari a R.",
+    "B": "La capacità C di un canale AWGN, in base alla formula di Shannon, individua il massimo rate R per il quale è possibile trasmettere informazione senza errori.",
+    "C": "Il rate R di una trasmissione è pari alla capacità C del canale quando la banda B del canale trasmissivo è utilizzata interamente.",
+    "D": "Il rate R di una trasmissione deve essere maggiore della capacità C di un canale AWGN, in base alla formula di Shannon, per garantire che esista un meccanismo per il recupero dei bit in ricezione senza errori."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "86",
+  "question": "Quali tra le seguenti funzioni NON rientra tra quelle svolte dal livello DL (Data-Link)?",
+  "answers": {
+    "A": "Il livello DL si occupa del framing, cioè la delimitazione delle diverse unità dati (trame), per poterle distinguere temporalmente le une dalle altre.",
+    "B": "Per apparire ai livelli superiori come un data pipe (“tubo di dati”), il livello DL opera il riordino dei bit arrivati fuori sequenza prima della consegna della trama al livello di rete.",
+    "C": "Il livello DL opera un controllo di flusso, per evitare di causare un overflow nel buffer di un ricevitore lento a smaltire le trame inviate da un trasmettitore veloce.",
+    "D": "Il livello DL coordina l’accesso ad un mezzo broadcast condiviso, attraverso specifici protocolli MAC (Medium Access Control)."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "87",
+  "question": "A livello MAC un protocollo si dice instabile quando:",
+  "answers": {
+    "A": "All’aumentare del numero di stazioni presenti sul canale, il traffico offerto viene bloccato dal protocollo di accesso al canale.",
+    "B": "All’aumentare del traffico offerto dalle stazioni al canale, il traffico smaltito dal canale stesso subisce delle oscillazioni tra un massimo e un minimo (instabilità).",
+    "C": "All’aumentare del traffico offerto dalle stazioni al canale, oltre una soglia che definisce il throughput massimo, il traffico smaltito dal canale stesso diminuisce fino ad azzerarsi.",
+    "D": "All’aumentare del traffico smaltito dal canale, le stazioni non riescono ad offrire abbastanza traffico per il corretto funzionamento del protocollo di accesso."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "88",
+  "question": "In una tabella di routing, la rotta di default con destinazione 0.0.0.0/0:",
+  "answers": {
+    "A": "Indica il next-hop per i pacchetti con destinazione non direttamente raggiungibile.",
+    "B": "Indica il next-hop da utilizzare nel caso il default router sia temporaneamente irraggiungibile.",
+    "C": "Indica il next-hop per i datagrammi di un host con indirizzo sorgente in una rete locale che vanno instradati verso il resto di Internet.",
+    "D": "Indica il next-hop per i datagrammi il cui indirizzo di destinazione non è compreso nel campo destinazione di nessun’altra riga della tabella di routing."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "89",
+  "question": "La consegna indiretta di un datagramma IP avviene quando:",
+  "answers": {
+    "A": "La sorgente non conosce l’indirizzo IP della destinazione ma solo il suo nome (Fully Qualified Domain Name – FQDN).",
+    "B": "A livello IP è necessario l’intervento di uno o più router per inoltrare il datagramma.",
+    "C": "Ci sono più di due link di trasmissione tra la sorgente e la destinazione e quindi è necessario fare una commutazione.",
+    "D": "Ci sono uno o più switch Ethernet tra la sorgente e la destinazione."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "90",
+  "question": "Come viene assegnata la parte di indirizzo di HostID in IPv6:",
+  "answers": {
+    "A": "È fissato dal produttore, tanto gli indirizzi sono talmente tanti (2128) che non ci sono rischi di duplicazione.",
+    "B": "Dal DNS IPv6.",
+    "C": "Devono essere configurati a mano (per adesso) perché IPv6 è ancora poco diffuso.",
+    "D": "In modo autonomo dall’Host a partire dal MAC address dell’interfaccia a cui si assegna l’indirizzo IPv6."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "91",
+  "question": "Il protocollo ICMP (Internet Control Message Protocol):",
+  "answers": {
+    "A": "È un protocollo applicativo di supporto a IP i cui messaggi, incapsulati in un datagramma UDP, consentono di realizzare i comandi “ping” e “traceroute” per scoprire l’esistenza di un host con un dato indirizzo IP e il percorso effettuato per raggiungerlo.",
+    "B": "È un protocollo di supporto a IP i cui messaggi, incapsulati direttamente in un datagramma IP, servono a notificare a una interfaccia IP stati e condizioni della rete come ad esempio: la raggiungibilità di una interfaccia o di una sottorete, condizioni di errore come TTL (Time To Live) = 0, o la mancanza di un percorso valido verso l’host selezionato dall’indirizzo IP (no route to host).",
+    "C": "È un protocollo di supporto a IP i cui messaggi, veicolati attraverso una connessione TCP per affidabilità, servono a notificare a un host stati e condizioni della rete come ad esempio: la raggiungibilità di una interfaccia o di una sottorete, condizioni di errore come TTL (Time To Live) = 0, o la mancanza di un percorso valido verso l’host selezionato dall’indirizzo IP (no route to host).",
+    "D": "È un protocollo applicativo di supporto a IP i cui messaggi, incapsulati in un datagramma UDP, servono a notificare a una interfaccia IP stati e condizioni della rete come ad esempio: la raggiungibilità di una interfaccia o di una sottorete, condizioni di errore come TTL (Time To Live) = 0, o la mancanza di un percorso valido verso l’host selezionato dall’indirizzo IP (no route to host)."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "92",
+  "question": "Quali destinazioni verranno raggiunte da un datagramma con un indirizzo destinazione 255.255.255.255 (limited broadcast) generato da un host che insiste sulla subnet 78.91.2.0/23?",
+  "answers": {
+    "A": "tutti i nodi della subnet, limitatamente a quelli con funzioni di server (DHCP, DNS, ecc).",
+    "B": "tutti i nodi di internet, limitatamente agli indirizzi unicst pubblici.",
+    "C": "gli stessi che sarebbero raggiunti da un datagramma con indirizzo 78.91.3.255.",
+    "D": "gli stessi nodi che sarebbero raggiunti da un datagramma con indirizzo 78.91.255.255."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "93",
+  "question": "un protocollo:",
+  "answers": {
+    "A": "definisce la sintassi, la temporizzazione e la semantica dei messaggi che si scambiano due entità di reti di livelli adiacenti (ad esempio N ed N – 1) attraverso le primitive dei protocolli.",
+    "B": "definisce i formati e i campi dei messaggi che si scambiano due calcolatori per comunicare tra loro.",
+    "C": "definisce la sintassi, la temporizzazione e la semantica dei messaggi che si scambiano due entità di pari livello in due sistemi collegati direttamente attraverso dei mezzi trasmissivi.",
+    "D": "definisce la sintassi, la temporizzazione e la semantica dei messaggi che si scambiano entità di pari livello in sistemi collegati (anche indirettamente) attraverso dei mezzi trasmissivi."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "94",
+  "question": "perchè il protocollo FTP (file transfer protocol) di differenzia agli altri protocolli di livello applicativo di internet?",
+  "answers": {  
+    "A": "è stateless, come HTTP, ma pur usando due connessioni TCP in parallelo può trasferire un solo file alla volta.",
+    "B": "è stateful e usa una connessione TCP sulla porta 21 del server per i comandi (connessione di controllo) e una connessione TCP con HTTP per trasferire i file (oggetti del trasferimento).",
+    "C": "è stateless, ma usando connessioni TCP separate, una per ciascun file, per consentire trasferimenti in parallelo e non bloccare il funzionamento in caso di trasferimento di un file molto grosso.",
+    "D": "è statefull e usa due connessioni TCP separate: una per i comandi (connessioni di controllo) e una per il trasferimento dei file."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "95",
+  "question": "in un record di tipo NS del DNS (domain name system):",
+  "answers": {
+    "A": "il campo name è il nome alias dell'host; il campo value è il nome autentico o 'canonico'.",
+    "B": "il campo name è il nome del dominio; il campo value è il nome dell'host che ospita il server di competenza per quel dominio.",
+    "C": "il campo name è il nome del dominio; il campo value è l'indirizzo IP del server TLD o comunque del server gerarchicamente superiore nel DNS.",
+    "D": "il campo name è il nome del server DNS di competenza; il campo value è il nome del dominio cercato."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "96",
+  "question": "il livello Data-Link implementa spesso una funzione di rilevamento errori. In che modo?",
+  "answers": {
+    "A": "il trasmettitore appllica una funzione ai byte della trama e ottiene un numero, chiamato checksum, che viene inviato al ricevitore su un canale sicuro. Quando riceve anche la trama, il ricevitore effettua lo stesso calcolo e accetta la trama solamente se il risultato calcolato localmente al valore sul canale sicuro.",
+    "B": "implementando un codice a correzione degli errori che consente al ricevitore di correggere eventuali errori sui bit.",
+    "C": "calcolando al trasmettitore un bit di parità per ogni byte trasmesso. Il ricevitore accetta la trama solo le tutti i bit di parità sono corretti.",
+    "D": "il trasmettitore applica una funzione ai byte della trama e ottiene un numero, chiamato checksum, che viene incluso nell'intestazione. Il ricevitore effettua lo stesso calcolo e accetta la trama solamente se il risultato calcolato localmente è uguale al valore del campo checksum."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "97",
+  "question": "nell'intestazione di una trama Ethernet si trovano sempre:",
+  "answers": {
+    "A": "indirizzo MAC destinazione, Indirizzo MAC sorgente, specifica dell'encoding usato a livello fisico.",
+    "B": "indirizzo MAC destinazione, ma non l'indirizzo MAC sorgente che è inutile essendoci l'indirizzo IP.",
+    "C": "indirizzo MAC destinazione, indirizzo MAC sorgente, CRC su 32 bit",
+    "D": "indirizzo MAC destinazione, indirizzo MAC sorgente, indirizzo IP destinazione, indirizzo IP sergente."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "98",
+  "question": "internet ha una architettura protocollare definita su 5 livelli: fisico, data-link, rete, trasporto, applicazione. Scegliere l'affermazione che spiega meglio questa scelta.",
+  "answers": {
+    "A": "è il numero massimo di annidamento ammesso dai sistemi operativi degli host, che non sono in grado di gestire un numero superiore di incapsulamenti.",
+    "B": "è il numero di livelli del modello ISO/OSI, che è uno standard internazionale; inizialmente ISO/OSI aveva 7 livelli, ma con l'avvento di internet sono stati ridotti a 5.",
+    "C": "è un compromesso che lascia al livello applicazione tutti i compiti relativi alla gestione sintattica dei dati, dalla sincronizzazione dei flussi, alla rappresentazione delle immagini e così via.",
+    "D": "è il numero che deriva da una procedura di ottimizzazione effettuata a partire dai 7 livelli del modello ISO/OSI."
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "99",
+  "question": "un server Proxy HTTP:",
+  "answers": {
+    "A": "intercetta le richieste dei client (browser), verifica che le richieste siano valide e in caso positivo le inoltra al server specificato nella richiesta, se no le scarta.",
+    "B": "intercetta le richieste dei client (browser) che sono stati configurati per usare il Proxy e se ha risposta valida nella cache risponde direttamente, altrimenti inoltra la richiesta al server specificato nella richiesta, intercetta la risposta e infine la invia al client.",
+    "C": "è una forma evoluta di NAT (Network address Translation) che consente un'efficienza maggiore nella traduzione degli indirizzi perchè conosce già il protocollo usato, inoltre può fare caching delle risposte per riusarle se necessario.",
+    "D": "intercetta le richieste dei client con indirizzi IP privati e modifica l'indirizzo IP del client in modo che la richiesta possa essere inoltrata su internet, intercetta poi la risposta e la inoltra al client con l'indirizzo privato"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "100",
+  "question": "l'uso di connessioni persistenti rende HTTP più efficiente?",
+  "answers": {
+    "A": "Si, perchè si possono usare connessioni in parallelo per inviare le richieste successive senza aspettare la fine di un trasferimento per iniziare il successivo.",
+    "B": "No, l'efficienza di HTTP è indipendente dal numero di connessioni aperte o dalla loro persistenza, ma dipende solamente dall'RTT che se è grande rallenta il trasferimento dei dati.",
+    "C": "No, l'uso di connessioni persistenti non è legato alle prestazioni ma alla sicurezza in rete.",
+    "D": "Si, perchè si evita il costo di un three-way-handshake per ogni oggetto da trasferire dato che si trasferiscono più oggetti sulla stessa connessione TCP."
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "101",
+  "question": "come si comporta il protocollo CSMA puro (ovvero senza la capacità di rilevare perdite o collisioni) nella sua versione 1-persistente rispetto ad ALOHA?",
+  "answers": {
+    "A": "funziona molto meglio in termini di throughput, poiché ogni volta che trova il canale occupato ritenta dopo un tempo casuale. Di fatto dunque trasmette solamente se il canale è effettivamente libero.",
+    "B": "può causare grandi ritardi di trasmissione poiché attende che il canale si liberi prima di trasmettere, mentre in ALOHA questo non accade.",
+    "C": "leggermente meglio in termini di throughput di rete, poiché nonostante la sua aggressività (trasmissione deterministica del frame non appena il canale si libera) evita perlomeno di trasmettere mentre qualcun altro sta già utilizzando il canale.",
+    "D": "in termini di throughput funziona meglio della versione pura di ALOHA, ma peggio di quella slot, poiché causa più collisioni"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "102",
+  "question": "la funzione NAPT (network address and port traslation) è la più usata per interconnettere reti IP private alla internet pubblica, un NAPT consente:",
+  "answers": {
+    "A": "di mappare IP privati su IP pubblici consentendo anche di raggiungere in modo trasparente i server con indirizzo IP privato.",
+    "B": "di mappare un singolo IP privato su un singolo IP pubblico legandoli in modo biunivoco per la durata della connessione.",
+    "C": "di mappare IP privati su IP pubblici, ma solo per il protocollo di trasporto TCP che è orientato alla connessione e usa le porte per identificare i flussi dati",
+    "D": "di mappare un numero pressochè illimitato di IP privati su un singolo IP pubblico grazie alla flessibilità di modificare anche le porte sorgente dei client con IP privati"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "103",
+  "question": "il comando “traceroute”:",
+  "answers": {
+    "A": "sfrutta il fatto che i router dovrebbero inviare un messaggio ICMP di notifica alla sorgente del messaggio ICMP traceroute quando lo inoltrano: traceroute è un messaggio specifico di ICMP.",
+    "B": "sfrutta il fatto che i router dovrebbero inviare un messaggio ICMP di errore alla sorgente di un datagramma con TTL = 0 (time to live scaduto, e quindi il datagramma viene scartato).",
+    "C": "chiede alla destinazione di rimandare alla sorgente un messaggio ICMP che, nel percorso di andata, ha raccolto l'indirizzo IP di tutti i router attraversati.",
+    "D": "interroga le tabelle di routing per trovare il percorso sergente-destinazione"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "104",
+  "question": "la topologia ad anello con canali bidirezionali:",
+  "answers": {
+    "A": "è la topologia in assoluto più economica perchè ha il numero minimo di canali possibili",
+    "B": "è la più semplice topologia che ammette un ridondanza di cammini tra tutti i nodi e quindi consente il funzionamento della rete ache in presenza di un singolo canale non funzionante",
+    "C": "è la topologia più usata nelle reti locali per semplicità di cablaggio",
+    "D": "è la topologia più complessa che si può usare senza la necessità di calcolare i cammini migliori tra i nodi."
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "105",
+  "question": "il protocollo HTTP/2, attualmente in fase di adozione da parte di quasi tutti gli host in internet, ha le seguenti caratteristiche:",
+  "answers": {
+    "A": "è basato sull'aertura di una singola connessione TCP crittografata (https, ovvero http su TLS) tra client e server e definisce i concetti di 'stream' e 'frame' ceh consentono di multiplare la trassmissione di diversi oggetti sulla stessa connessione, evitando il fenomeno di 'blocco' che potrebbe accadere su una singola connessione se il primo oggetto richiesto impiega molto a essere trasferito. È una evoluzione del protocollo SPDY proprietario di google ed è stato standardizzato nel 2015",
+    "B": "è basato sull'apertura di una singola connessione TCP crittografata (https, ovvero http su TLS) tra client e server e definisce i concetti di 'stream' e 'frame' per lasciare maggiore libertà ai client (browser) sull'ordine e la priorità con cui scaricare gli oggetti della pagina Web in modo da poter ottimizzare il suo 'rendering' sul terminale dell'utente",
+    "C": "è una semplice evoluzione di http/1.1 che consente di crittografare le connessioni rendendole sucure (https, ovvero http su TLS), inoltre permette ai client di scegliere con maggiore libertà l'ordine con cui scaricare gli oggetti che compongono la pagina Web",
+    "D": "è basato sull'apertura di una singola connessione crittografata che non usa TCP, ma UDP (http su DTLS) per evitare che le fluttuazioni della finestra TCP dovuta alle perdite rendano difficile la trasmissione di contenuti multimediali"
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "106",
+  "question": "quale delle seguenti affermazioni è corretta?",
+  "answers": {
+    "A": "per sviluppare una applicazione su internet è necessario far registrare un nome a dominio da un register e, in ultima analisi da IANA, in modo che l'applicazione sia nota e possa essere trovata dai processi client",
+    "B": "le applicazioni di internet sono illimitate perchè possono essere sviluppare negli host terminali senza dover modificare le funzioni all'interno della rete",
+    "C": "le applicazioni di internet sono moltissime, ma sono limitate dai servizi offerti dai protocolli di livello trasporto se non esiste un protocollo di livello trasporto opportuno allora non si può sviluppare una nuova applicazione",
+    "D": "ad ogni applicazione corrisponde uno e un solo protocollo di livello applicativo, ad esempio FTP per file transfer, HTTP per il Web, SMTP per la posta elettronica e così via"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "107",
+  "question": "l'header di un segmento UDP (user datagram protocol) contiene un campo checksum opzionale lungo 16 bit, esso:",
+  "answers": {
+    "A": "permette la correzzione degli errori nell'header UDP, e rileva errori nei dati del payload e acneh alcune informazioni dell'header IP (pseudo-header IP)",
+    "B": "permette la correzione degli errori, coprendo l'header UDP e anche alcune informazioni dell'header IP (pseudo-header IP)",
+    "C": "permette la rilevazione degli errori, coprendo l'header UDP e alcune informazioni dell'header IP (pseudo-header IP), opzionalmente può coprire anceh i dati nel payload",
+    "D": "permette la correzione di fino a 16 bit errati, coprendo l'header UDP, i dati del payload e anche alcune informazioni dell'header IP (pseudo-header IP)"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "108",
+  "question": "il framing (delimitazione delle trame) in ethernet si ottiene:",
+  "answers": {
+    "A": "da un inter packer gap (IPG, un periodo di silenzio) sia prima che dopo la trama",
+    "B": "con il byte start of frame '10101011' al termine del preambolo di sincronizzazione (costituito da una sequenza 101010...) e anche come byte finale della trama",
+    "C": "con il byte start of frame '10101011' al termine del preambolo di sincronizzazione (costituito da una sequenza 101010...) e inoltre specificando la lunghezza della trama stessa in un campo apposito dell'header",
+    "D": "dall'idirizzo MAC della destinazione all'inizio della trama e dal campo checksum che contiene il CRC alla fine della trama"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "109",
+  "question": "un grafo G = (V, A) può rappresentare efficacemente la topologia di una porzione di internet quando",
+  "answers": {
+    "A": "V è l'insieme dei dispositivi della rete (router più host) e A è l'nsieme delle connessioni TCP attualmente aperte",
+    "B": "V è l'insieme delle subnet della porzione di rete e A è l'insieme delle connessioni logiche tra i router",
+    "C": "V è l'insieme dei router della rete e A è l'insieme di tutti gli host che stanno nelle subnet dei router",
+    "D": "V è l'insieme dei router considerati e A è l'insieme delle subnet che intercorrono i router. Se una subnet interconnette più di un router, allora questa viene rappresentata in A come archi distinti per ogni coppia di router"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "110",
+  "question": "qual è il significato di MTU, con particolare riferimento alla frammentazione dei datagrammi IP",
+  "answers": {
+    "A": "la MTU (minimum trasmission unit) è la dimensione minima del payload dei datagrammi in un dato segmento di rete, datagrammi più piccoli che lo attraversano vengono allungati a MTU tramite il padding",
+    "B": "la MTU (maximum trasmission unit) è la dimensione massima delle trame in un dato segmento di rete: un datagramma più grande che attraversa tale segmento viene compresso (ad esempio con l'algoritmo di lempelziv) per diventare più corto di mtu",
+    "C": "la MTU (maximum trasmission unit) è la dimensione massima del payload di una trama in un dato segmento di rete: un datagramma puù grande che attraversa tale segmento deve essere frammentato oppure scartato",
+    "D": "la MTU (minimum trasmission unit) è la dimensione minima delle trame perchè il livello 2 possa funzionare correttamente"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "111",
+  "question": "il livello Data-Link implementa spesso una funzione di rilevamento errori, in che modo?",
+  "answers": {
+    "A": "il trasmettitore applica una funzione ai byte della trama e ottiene un numero, chiamato checksum, che viene incluso nell'intestazione. Il ricevitore effettua lo stesso calcolo e accetta la trama solamente se il risultato calcolato localmente è uguale al valore del campo checksum",
+    "B": "calcolando al trasmettitore un bit di parità per ogni byte trasmesso. Il ricevitore accetta la trama solo se tutti i bit di parità sono corretti",
+    "C": "il trasmettitore applica una funzione ai byte della trama e ottiene un numero, chiamato checksum, che viene inviato al ricevitore su un canale sicuro. Quando riceve anche la trama, il ricevitore effettua lo stesso calcolo e accetta la trama solamente se il risultato calcolato localmente al valore ricevuto sul canale sicuro",
+    "D": "implementando un codice a correzione degli errori che consente al ricevitorie di correggere eventuali errori sui bit"
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "112",
+  "question": "i protocolli aloha e slotted aloha:",
+  "answers": {
+    "A": "sono usati in WiFi per prenotare il canale (collision avoidance)",
+    "B": "hanno una pura rilevanza storica e non sono più usati in alcuna rete",
+    "C": "sono gli unici protocolli MAC utilizzabili quando non sia possibile ascoltare il canale di trasmissione e non sia possibile avere una entità centralizzata che coordina l'accesso",
+    "D": "si possono usare solo nelle reti radio, perchè in una rete cablata se il canale è occupato la trasmissione è automaticamente inibita"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "113",
+  "question": "il protocollo IMAP consente ad uno User Agent di posta elettronica:",
+  "answers": {
+    "A": "di inviare messaggi di posta elettronica al proprio server, mentre per riceverli bisogna usare POP3",
+    "B": "di scaricare i messaggi da un server, eventualmente cancellandoli dal server, ma non di gestirli sul server stesso",
+    "C": "di gestire i messaggi direttemente sul server senza poterli scaricare in locale",
+    "D": "di scaricare i messaggi da un server e di gestirli in modo coordinato su tutti gli User Agent che si collegano alla casella di posta elettronica (PC, Smartphone, etc.)"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "114",
+  "question": "nel protocollo HTTP il metodo GET condizionale consente di interrogare un server Web:",
+  "answers": {
+    "A": "per sapere se un oggetto è stato modificato dopo una data che viene specificata nella richiesta; se l'oggetto non è stato modificato il server risponde con il codice '304 not modified', altrimenti trasferisce l'oggetto",
+    "B": "per sapere se un oggetto che non era disponibile è diventato disponibile e può essere scaricato",
+    "C": "per sapere se un oggetto è stato modificato dopo una data che viene specificata nella richiesta, se l'oggetto non è stato modificato il server risponde con il codice '304 not modified', altrimenti risponde con il codice '222 object modified' e il client può decidere se scaricarla o meno",
+    "D": "specificando nella richiesta una condizione per scaricare l'oggerro richiesto, ad esempio se l'oggetto è di dimensione inferiore a una data soglia; se l'oggetto rispetta la condizione il server lo trasferisce, altrimenti risponde con il codice '444 condition not met'"
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "115",
+  "question": "l'architettura di servizio dominante in internet è l'architettura client/server. In questa architettura il processo client, una volta conosciuto l'indirizzo IP dell'host in cui risiede il processo server",
+  "answers": {
+    "A": "inizia la comunicazione usando come porta destinazione una porta effimera assegnata dal sistema operativo in modo casuale per evitare conflitti",
+    "B": "apre una connessione TCP usando le porte comunicate dal DNS insieme all'indirizzo IP",
+    "C": "inizia la comunicazione usando come porta destinazione la porta, normalmente “well known” del servizio e usando come porta sorgente una porta effimera assegnata dal sistema operativo",
+    "D": "inizia la comunicazione usando come porta destinazione la porta, normalmente “well known”, del servizio e usando come porta sorgente la stessa porta per consentire il ritorno dei pacchetti"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "116",
+  "question": "lo scadere del retransmission timeout (RTO) in un trasferimento TCP",
+  "answers": {
+    "A": "è una condizione che non può verificarsi dopo la ricezione del terzo ACK duplicato perchè la ritrasmissione del segmento perso è gestita da Fast Retransmit/Fast Recovery",
+    "B": "causa il dimezzamento della SSTHR (SSTHR = SSTHR/2) e la ritrasmissione del segmento perso ponendo CWND = 1/MSS",
+    "C": "causa il raddoppio di RTO e la ritrasmissione del primo segmento della finestra di trasmissione ponendo CWND = 1/MSS",
+    "D": "causa SSTHR = CWND/2, CWND = SSTHR+3 e la ritrasmissione del segmento perso"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "117",
+  "question": "in un protocollo di trasporto affidabile tipo TCP, che numera i byte trasmessi, la finestra di trasmissione può essere identificata da un puntatore LP che punta al primo byte della finestra ed un puntatore UP che punta all'ultimo byte della finestra. Si supponga che ad un dato istante LP = 1340, e UP = 1739 e il trasmettitore riceve un ACK cumulativo che riscontra i byte da 1340 a 1389. quanto valgono LP e UP dopo la ricezione dell'ACK?",
+  "answers": {
+    "A": "LP = 1391, UP = 1800",
+    "B": "LP = 1390, la finestra di trasmissione si allunga di 100 byte, quindi UP = 1889",
+    "C": "LP = 1390, UP dipende da se e come evolve la finestra di trasmissione",
+    "D": "il trasmettitore attende i riscontri di tutti i byte nella finestra di trasmissione (o va in timeout), poi LP = 1750 e UP = 2149"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "118",
+  "question": "il compito di un protocollo MAC (Medium access control) è:",
+  "answers": {
+    "A": "assegnare le risorse trasmissive di un canale condiviso alle stazioni, in modo che non ci possano essere contese",
+    "B": "organizzare l'accesso delle stazioni a un canale di trasmissione condiviso avendo come obbiettivo primario la riduzione del tempo di attesa delle trame prima della trasmissione, ciò anche a discapito dell'equità nell'accesso pur di evitare che una singola stazione lenta possa penalizzare le altre",
+    "C": "organizzare l'accesso delle stazioni a un canale di trasmissione condiviso dividendo le risorse del canale in modo rigorosamente uguale tra tutte le stazioni",
+    "D": "organizzare l'accesso delle stazioni a un canale di trasmissione condiviso cercando di massimizzare l'uso del canale stesso mantenendo contemporaneamente un livello di equità accettabile"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "119",
+  "question": "i 128 bit degli indirizzi Ipv6 sono:",
+  "answers": {
+    "A": "divisi in un numero di bit b per l'instradamento globale variabile tra 48 e 64 bit per l'identificazione delle singole interfacce locali ed eventuale subnetting usando i 64 – b bit avanzati",
+    "B": "rigidamente divisi in 32 bit per l'instradamento globale, 32 bit per la suddivisione in subnet locali e 64 bit per l'identificazione delle singole interfacce locali",
+    "C": "rigidamente divisi in 63 bit per l'instradamento globale e 63 bit per l'identificazione delle singole interfacce locali, con eventuale subnetting effettuando da maschere di sottorete da 64 bit",
+    "D": "rigidamente divisi in 48bit per l'instradamento globale, 16 bit per la suddivisione in subnet locali e 63 bit per l'identificazione delle singole interfacce locali"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "120",
+  "question": "Claude Shannon, padre della teoria dell'informazione, ha proposto un modello di canale di trasmissione noto come additive white gaussian noise (AWGN). Siano B la banda del canale in Hz, S l'energia associata ai bit trasmessi e N l'energia del rumore additivo per ciascun bit. In base alla teoria di shannon, la capacità massima C in bit/s di questo canale trasmissivo è C = B log2 (S / N+1). Quale di queste affermazioni è FALSA?",
+  "answers": {
+    "A": "raddoppiando la banda del canale la capacità raddoppia",
+    "B": "raddoppiando l'energia del segnale la capacità aumenta di quattro volte",
+    "C": "se l'energia per bitl del rumore N è maggiore dell'energia per bit del segnale la capacità diventa minore di B bit/s",
+    "D": "aumentando l'energia del segnale la capacità aumenta"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "121",
+  "question": "la struttura dell'intestazione (header) delle richieste HTTP è (<SP> rappresenta uno spazio):",
+  "answers": {
+    "A": "contrariamente alle richieste che sono in formato testuale, è formata da compi binari di dimensione fissa per velocizzare l'elaborazione nel broswer",
+    "B": "la prima riga ha la seguente forma fissa: <metodo><SP><versione><SP><risposta>CRLF le righe successive hanno la forma generica: <tag>:<SP><valore>CRLF",
+    "C": "la prima riga ha la seguente forma fissa: <versione><SP><codice di stato><SP><espressione di stato>CRLF le righe successive hanno la forma generica: <tag>:<SP><valore>CRLF",
+    "D": "è formata da campi testuali descrittivi con un formato compatibile con XML così è facile da parsificare"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "122",
+  "question": "la cosiddetta “sindrome del terminale nascosto” è dovuta a:",
+  "answers": {
+    "A": "una condizione patologica che impedisce a un ricevitore di “trovare” il terminale che sta trasmettendo",
+    "B": "due terminali che non si sentono l'un l'altro e trasmettono verso la stessa destinazione causando collisioni sistematiche",
+    "C": "due terminali che non si sentono l'un l'altro e quindi non possono trasmettere reciprocamente",
+    "D": "una condizione patologica che impedisce ai trasmettitori di ricevere correttamente gli ACK dei ricevitori"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "123",
+  "question": "un ACK di TCP, quindi un segmento senza payload, deve essere trasmesso attraverso una porzione di rete Ethernet. Quanto è lunga la trama, ignorando l'inter Frame Gap e il preambolo?",
+  "answers": {
+    "A": "66 byte: 8 byte di start of frame, 14 byte di header Ethernet, 20 byte di header IP, 20 byte di header TCP, 4 byte di trailer Ethernet",
+    "B": "60 byte: 14 byte di header Ethernet, 20 byte di header IP, 20 byte di header TCP, 2 byte di Acknowledgement number, 4 byte di trailer Ethernet",
+    "C": "64 byte: 14 byte di header Ethernet, 20 byte di header IP, 20 byte di header TCP, 6 byte di padding, 4 byte di trailer Ethernet",
+    "D": "58 byte: 14 byte di header Ethernet, 20 byte di header IP, 20 byte di header TCP, 4 byte di trailer Ethernet"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "124",
+  "question": "il protocollo ARP (address resolution Protocol) risolve sempre:",
+  "answers": {
+    "A": "l'indirizzo IP della URL specificata nella richiesta",
+    "B": "l'indirizzo IP del Defaul Gateway a cui consegnare il datagramma per l'inoltro",
+    "C": "l'indirizzo MAC corrispondente all'indirizzo IP di destinazione",
+    "D": "l'indirizzo MAC del next-hop, ovvero dell'host o router a cui deve essere consegnato il datagramma IP per il corretto inoltro verso la destinazione"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "125",
+  "question": "considerando le funzioni logiche di routing, inoltro e NAPT (network address and port traslation):",
+  "answers": {
+    "A": "spesso sono implementate su dispositivi diversi dato che le funzioni di NAPT e inoltro sono indipendenti: nel flusso in uscita da una rete privata verso la rete pubblica si può operare l'inoltro senza il NAPT e viceversa",
+    "B": "se implementate sullo stesso dispositivo, è necessario avere molta memoria disponibile perchè entrambe le funzioni logiche devono memorizzare informazioni di stato. Se invece sono su dispositivi diversi la memoria è di meno perche le informazioni di stato non si moltiplicano",
+    "C": "spesso sono implementate sullo stesso dispositivo anche se coinvolgono livelli diverdi (NAPT coinvolge anche il livello trasporto) dato che alla funzione NAPT è sempre associata una corrispondente funzione di inoltro",
+    "D": "che siano implementate sullo stesso dispositivo o meno, l'importante è che sinao funzioni coordinate perchè si complementano: l'inoltro lavora a livello di rete e il NAPT al livello di trasporto"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "126",
+  "question": "DHCP (dynamic host configuration protocol) serve a configurare in modo automatico un host quando questo si collega ad una rete locale. Quali indirizzi IP vengono usati da client e server nel primo scambio (discover/offer) supponendo che l'indirizzo del server sia 222.1.1.5 e quello offerto al client 222.1.1.33 ?",
+  "answers": {
+    "A": "discover: SRC 0.0.0.0; DEST: 255.255.255.255 e offer: SRC: 222.1.1.5; DEST: 255.255.255.255",
+    "B": "discover: SRC 255.255.255.255; DEST: 0.0.0.0 e offer: SRC: 222.1.1.5; DEST: 255.255.255.255",
+    "C": "discover: SRC 0.0.0.0; DEST: 222.1.1.5 e offer: SRC: 222.1.1.5; DEST: 222.1.1.33",
+    "D": "discover: SRC 0.0.0.0; DEST: 255.255.255.255 e offer: SRC: 255.255.255.255; DEST: 255.255.255.255 or 222.1.1.33"
+  },
+  "correctAnswer": "A"
+},
+{
+  "number": "127",
+  "question": "quale delle seguenti affermazioni sull'header IP è FALSA?",
+  "answers": {
+    "A": "il campo TTL viene decrementato ad ogni hop, il suo scopo è permettere di scartare datagrammi che sono presenti in rete “da troppo tempo”",
+    "B": "il campo checksum consente la rilevazione di errori nell'header IP (ma non nel payload)",
+    "C": "i campi IP sorgente e IP destinazione non vengono mai modificati dai nodi intermedi (a meno che non si attraversi un NAT)",
+    "D": "la lunghezza complessiva dell'header IP, compresa di eventuali opzioni, deve essere un multiplo di 20 byte (che è la lunghezza dell'header senza opzioni). Per questo scopo viene usato il campo padding che aggiunge bit tutti a zero"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "128",
+  "question": "un host con indirizzo 130.192.1.15/24 deve consegnare un datagramma a un host con indirizzo 130.192.2.27/24. come si comporta?",
+  "answers": {
+    "A": "effettua una consegna deretta perchè sono nella stessa subnet",
+    "B": "invia il datagramma al router di default della sottorete di destinazione e quindi all'indirizzo 130.192.2.0, che è l'indirizzo di rete corrispondente all'indirizzo unicast 130.192.2.27/24",
+    "C": "risolve l'indirizzo del default gateway con ARP (se non lo ha già nella cache ARP) e lo consegna al default gateway",
+    "D": "risolve il nome dell'host di destinazione con il servizio DNS e poi invia il datagramma al router di destinazione corretto"
+  },
+  "correctAnswer": "C"
+},
+{
+  "number": "129",
+  "question": "con quale formula viene calcolato l'RTO (retransmission timeout) di TCP?",
+  "answers": {
+    "A": "RTO = 4/SRTT + RTTVAR dove SRTT è la stima del valor medio di RTT e RTTVAR è la stima della sua varianza",
+    "B": "RTO = SRTT + max(G, 4/RTTVAR), dove SRTT è la stima del valor medio di RTT, RTTVAR è la stima della sua varianza e G è un valore che dipende dal sistema operativo",
+    "C": "RTO = 2/SRTT + RTTVAR, dove SRTT è la stima del valor medio di RTT e RTTVAR è la stima della sua varianza",
+    "D": "RTO = SRTT + RTTVAR + G, dove SRTT è la stima del valor medio di RTT, RTTVAR è la stima della varianza e G è un valore che dipende dal sistema operativo"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "130",
+  "question": "la finestra di ricezione di TCP:",
+  "answers": {
+    "A": "implementa il controllo di flusso impedendo al default gateway di inviare più informazioni di quanta il ricevitore ne possa ricevere",
+    "B": "implementa il controllo di flusso impedendo al sistema operativo di passare al ricevitore più informazioni di quanta questo ne possa memorizzare",
+    "C": "è la massima dimensione dei segmenti (MSS) inviati dal trasmettitore: segmenti più grossi non potrebbero stare nel buffer di ricezione",
+    "D": "implementa il controllo di flusso impedendo al trasmettitore di inviare più informazioni di quanta il ricevitore ne possa ricevere"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "131",
+  "question": "cosa rappresenta la finestra di ricezione in un protocollo a finestra del livello trasporto",
+  "answers": {
+    "A": "la quantità di dati che il ricevitore può accettare in sequenza dal trasmettitore, eventuali dati fuori sequenza vengono scartati",
+    "B": "è il parametro fondamentale per realizzare il controllo di flusso, perchè rappresenta la massima quantità di dati che il ricevitore può memorizzare e quindi la massima quantità di dati che il trasmettitore può inviare senza ricevere riscontri per non rischiare che il buffer del ricevitore vada in overflow",
+    "C": "la quantità di dati che il ricevitore memorizza prima di iniziare a trasferirli al livello applicativo, quindi è fondamentale per non rischiare che vada in overflow il buffer dell'applicazione",
+    "D": "è il parametro fondamentale per realizzare il controllo di congestione, infatti è uguale alla quantità di dati che il trasmettitore potrebbe ritrasmettere a causa delle perdite in rete (Go Back N – N è la dimensione della finestra di ricezione)"
+  },
+  "correctAnswer": "B"
+},
+{
+  "number": "132",
+  "question": "due stazioni A e B di un BSS 802.11 rilevano il canale occupato e attendono quinid la fine del dialogo sul canale per iniziare una procedura di accesso. Nell'ipotesi che siano le uniche due stazioni coinvolte nella procedura e che Cwmin = 32 per entrambe, qual è la probabilità che A trasmetta la propria trama con successo?",
+  "answers": {
+    "A": "2/32",
+    "B": "1⁄2",
+    "C": "1/32",
+    "D": "(1⁄2 – 1/32)"
+  },
+  "correctAnswer": "D"
+},
+{
+  "number": "133",
+  "question": "un messaggio ICMP (interner control message protocol):",
+  "answers": {  
+    "A": "è il payload di un segmento UDP che contiene una segnalazione di errore relativa ad un pacchetto IP, oppure la risposta a un messaggio ICMP, oppure ancora una condizione di errore globale, ad esempio “network unreachable”",
+    "B": "non viene generaro se un pacchetto IP ha la checksum errata, l'unica azione del router è semplicemente di scartare il pacchetto",
+    "C": "viene generato dal protocollo IP in risposta a una condizione di errore, come risposta a un altro messaggio ICMP (tranne i messaggi di errore), o infine come messaggio di segnalazione, ad esempio per verificare la funzionalità di una interfaccia",
+    "D": "può a sua volta generare un altro pacchetto ICMP in caso di errore"
+  },
+  "correctAnswer": "C"
+}
+]
