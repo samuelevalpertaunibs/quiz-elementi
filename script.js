@@ -21,8 +21,16 @@ function capitalizeFirstLetter(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 function startQuiz() {
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 20);
+    shuffledQuestions = shuffleArray(questions).slice(0, 20);
     currentQuestionIndex = 0;
     score = 0;
     document.getElementById('submit-button').style.display = 'none';
